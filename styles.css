@@ -44,6 +44,15 @@ body {
 .content {
   width: min(640px, 100%);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(30px, 4.6vw, 64px);
+}
+
+.logo-mark {
+  width: clamp(142px, 21vw, 190.5px);
+  height: auto;
 }
 
 h1 {
@@ -60,7 +69,7 @@ h1 span {
 }
 
 .copy {
-  margin: clamp(28px, 4.1vw, 44px) auto 0;
+  margin: 0;
   width: min(640px, 100%);
   font-size: clamp(1.15rem, 3.2vw, 1.75rem);
   line-height: 1.28;
@@ -72,7 +81,7 @@ h1 span {
 }
 
 .status {
-  margin: clamp(30px, 4.6vw, 64px) 0 0;
+  margin: 0;
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.1;
   font-weight: 500;
