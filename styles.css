@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "SF Pro Custom";
+  src: url("./assets/fonts/SF-Pro.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Custom";
+  src: url("./assets/fonts/SF-Pro-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 :root {
   --base-1: #0a0006;
   --base-2: #110022;
@@ -5,17 +21,13 @@
   --accent-violet: #ba7ef4;
   --accent-pink: #f444ac;
   --font-body:
-    "SF Pro Text",
-    "SF Pro Display",
-    "SF Pro",
+    "SF Pro Custom",
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
   --font-expanded:
-    "SF Pro Expanded",
-    "SF Pro Display",
-    "SF Pro",
+    "SF Pro Custom",
     "Avenir Next",
     -apple-system,
     BlinkMacSystemFont,
