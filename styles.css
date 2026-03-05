@@ -4,6 +4,23 @@
   --text: #f0e1ff;
   --accent-violet: #ba7ef4;
   --accent-pink: #f444ac;
+  --font-body:
+    "SF Pro Text",
+    "SF Pro Display",
+    "SF Pro",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  --font-expanded:
+    "SF Pro Expanded",
+    "SF Pro Display",
+    "SF Pro",
+    "Avenir Next",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
 
 *,
@@ -22,13 +39,7 @@ body {
   overflow: hidden;
   color: var(--text);
   background: linear-gradient(124.36deg, var(--base-1) 12%, var(--base-2) 91%);
-  font-family:
-    "SF Pro Display",
-    "SF Pro Text",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  font-family: var(--font-body);
 }
 
 .hero {
@@ -57,11 +68,12 @@ body {
 
 h1 {
   margin: 0;
-  font-family: "Instrument Serif", Georgia, serif;
+  font-family: var(--font-expanded);
   font-size: clamp(2.6rem, 7.3vw, 4rem);
   line-height: 1.2;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: -0.02em;
+  font-stretch: expanded;
 }
 
 h1 span {
@@ -71,6 +83,8 @@ h1 span {
 .copy {
   margin: 0;
   width: min(640px, 100%);
+  font-family: var(--font-body);
+  font-weight: 400;
   font-size: clamp(1.15rem, 3.2vw, 1.75rem);
   line-height: 1.28;
   letter-spacing: -0.01em;
@@ -82,10 +96,12 @@ h1 span {
 
 .status {
   margin: 0;
+  font-family: var(--font-expanded);
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.1;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.02em;
+  font-stretch: expanded;
   color: var(--accent-pink);
 }
 
