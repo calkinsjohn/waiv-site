@@ -121,64 +121,6 @@ h1 .on-air {
   color: var(--accent-pink);
 }
 
-.drift {
-  position: fixed;
-  inset: -24vmax;
-  pointer-events: none;
-  filter: blur(72px);
-  mix-blend-mode: screen;
-  will-change: transform;
-}
-
-.drift-a {
-  background: radial-gradient(circle at 28% 30%, rgba(116, 34, 181, 0.36), transparent 58%);
-  animation: drift-a 22s ease-in-out infinite alternate;
-}
-
-.drift-b {
-  background: radial-gradient(circle at 76% 56%, rgba(56, 112, 255, 0.24), transparent 60%);
-  animation: drift-b 28s ease-in-out infinite alternate;
-}
-
-.drift-c {
-  background: radial-gradient(circle at 52% 72%, rgba(244, 68, 172, 0.2), transparent 62%);
-  animation: drift-c 30s ease-in-out infinite alternate;
-}
-
-.vignette {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.35) 100%);
-}
-
-@keyframes drift-a {
-  0% {
-    transform: translate3d(-3%, -2%, 0) scale(1.03);
-  }
-  100% {
-    transform: translate3d(4%, 2.5%, 0) scale(1.08);
-  }
-}
-
-@keyframes drift-b {
-  0% {
-    transform: translate3d(3.5%, -3%, 0) scale(1.12);
-  }
-  100% {
-    transform: translate3d(-2.5%, 2.5%, 0) scale(1.04);
-  }
-}
-
-@keyframes drift-c {
-  0% {
-    transform: translate3d(-1.5%, 3%, 0) scale(1.03);
-  }
-  100% {
-    transform: translate3d(2.5%, -2%, 0) scale(1.1);
-  }
-}
-
 @media (max-width: 768px) {
   body {
     overflow-y: auto;
