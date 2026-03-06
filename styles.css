@@ -15,8 +15,8 @@
 }
 
 :root {
-  --base-1: #0a0006;
-  --base-2: #110022;
+  --base-1: #0a0005;
+  --base-2: #120021;
   --text: #f0e1ff;
   --accent-violet: #ba7ef4;
   --accent-pink: #f444ac;
@@ -50,7 +50,7 @@ body {
   margin: 0;
   overflow: hidden;
   color: var(--text);
-  background: linear-gradient(124.36deg, var(--base-1) 12%, var(--base-2) 91%);
+  background: linear-gradient(135.36deg, var(--base-1) 0%, var(--base-2) 100%);
   font-family: var(--font-body);
 }
 
@@ -90,6 +90,10 @@ h1 {
 
 h1 span {
   color: var(--accent-violet);
+}
+
+h1 .on-air {
+  color: #f444ac;
 }
 
 .copy {
