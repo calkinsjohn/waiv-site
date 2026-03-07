@@ -217,6 +217,27 @@ button {
   background: var(--text);
 }
 
+.store-badge {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: default;
+}
+
+.store-badge-small {
+  flex: 0 0 auto;
+}
+
+.store-badge-large {
+  width: fit-content;
+}
+
+.store-badge-image {
+  display: block;
+  width: auto;
+  height: 40px;
+}
+
 .studio-section {
   position: relative;
   background: linear-gradient(180deg, #0e020f 0%, var(--surface) 100%);
@@ -445,6 +466,10 @@ button {
     font-size: 11px;
   }
 
+  .store-badge-image {
+    height: 40px;
+  }
+
   .hero-shell,
   .section-shell {
     padding: 32px 20px 56px;
@@ -475,6 +500,12 @@ button {
     width: 100%;
     font-size: 14px;
     padding: 14px 18px;
+  }
+
+  .store-badge-large {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .pill {
