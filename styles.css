@@ -170,12 +170,11 @@ button {
 .lede {
   margin: 32px 0 0;
   max-width: 800px;
-  font-family: var(--font-expanded);
+  font-family: var(--font-body);
   font-size: 32px;
   line-height: 1.28;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: -0.02em;
-  font-stretch: expanded;
 }
 
 .hero-actions {
@@ -289,12 +288,11 @@ button {
 .feature-lede,
 .djs-copy {
   margin: 32px 0 0;
-  font-family: var(--font-expanded);
+  font-family: var(--font-body);
   font-size: 24px;
   line-height: 1.28;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: -0.02em;
-  font-stretch: expanded;
 }
 
 .djs-copy p {
