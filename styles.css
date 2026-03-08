@@ -525,10 +525,15 @@ button {
   .dj-rail {
     margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    overflow: visible;
-    padding-bottom: 0;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(158px, 158px);
+    gap: 16px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
   .dj-card-image {
