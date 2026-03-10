@@ -167,7 +167,8 @@ button {
 
 .hero-copy h1,
 .feature-copy h2,
-.djs-intro h2 {
+.djs-intro h2,
+.experience-intro h2 {
   margin: 0;
   font-family: var(--font-expanded);
   font-size: 64px;
@@ -333,7 +334,8 @@ button {
 }
 
 .feature-copy h2,
-.djs-intro h2 {
+.djs-intro h2,
+.experience-intro h2 {
   margin-top: 32px;
   font-size: 48px;
 }
@@ -464,16 +466,6 @@ button {
 
 .experience-section {
   position: relative;
-}
-
-.experience-intro h2 {
-  margin: 32px 0 0;
-  font-family: var(--font-expanded);
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
-  letter-spacing: -0.04em;
-  text-shadow: var(--hero-shadow);
 }
 
 .experience-steps {
@@ -641,7 +633,8 @@ button {
   }
 
   .feature-copy h2,
-  .djs-intro h2 {
+  .djs-intro h2,
+  .experience-intro h2 {
     font-size: 32px;
     line-height: 1;
     letter-spacing: -0.04em;
@@ -974,7 +967,8 @@ button {
 
   .hero-copy h1,
   .feature-copy h2,
-  .djs-intro h2 {
+  .djs-intro h2,
+  .experience-intro h2 {
     font-size: 32px;
     line-height: 1.0625;
     letter-spacing: -0.045em;
