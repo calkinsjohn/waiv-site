@@ -624,11 +624,16 @@ button {
 
   .section-shell {
     padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .feature-grid {
+    width: min(1280px, 100%);
     grid-template-columns: 400px minmax(0, 1fr);
     gap: 104px;
+    align-items: start;
   }
 
   .feature-copy h2,
@@ -647,6 +652,14 @@ button {
 
   .desktop-copy-extra {
     display: inline;
+  }
+
+  .djs-section {
+    width: min(1280px, 100%);
+  }
+
+  .djs-intro {
+    max-width: 640px;
   }
 
   .dj-rail {
@@ -700,15 +713,23 @@ button {
   }
 
   .experience-section {
-    display: grid;
-    grid-template-columns: 400px minmax(0, 1fr);
-    gap: 80px;
+    width: min(1280px, 100%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
     margin-top: 128px;
-    width: 100%;
+  }
+
+  .experience-intro {
+    width: 640px;
+    max-width: 100%;
   }
 
   .experience-media {
     position: relative;
+    flex: 0 0 690px;
+    width: 690px;
     min-height: 444px;
   }
 
@@ -732,7 +753,7 @@ button {
     align-items: center;
     gap: 64px;
     margin-top: 128px;
-    width: 100%;
+    width: min(1280px, 100%);
   }
 
   .site-footer-brand {
@@ -745,6 +766,10 @@ button {
   .footer-wordmark {
     width: 126px;
     height: 32px;
+  }
+
+  .site-footer-brand p {
+    width: min(1280px, 100%);
   }
 }
 
