@@ -32,7 +32,7 @@
       <section class="hero" data-node-id="463:526">
         <div class="hero-media" aria-hidden="true">
           <video
-            class="hero-image"
+            class="hero-image hero-video"
             autoplay
             muted
             loop
@@ -41,6 +41,11 @@
           >
             <source src="./assets/web-hero-video.mp4" type="video/mp4" />
           </video>
+          <img
+            src="./assets/figma/desktop/hero-1440.png"
+            alt=""
+            class="hero-image hero-image-desktop"
+          />
         </div>
 
         <header class="topbar" data-node-id="463:527">
@@ -59,7 +64,7 @@
           </button>
         </header>
 
-        <div class="hero-shell" data-node-id="463:542">
+        <div class="hero-shell hero-shell-default" data-node-id="463:542">
           <div class="hero-copy" data-node-id="463:543">
             <h1 data-node-id="463:544">
               Radio, but it plays <span>your</span> music.
@@ -74,6 +79,37 @@
             <button class="button button-primary hero-cta" type="button">
               <span class="button-icon" aria-hidden="true">▶</span>
               <span>Listen to a sample</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-shell hero-shell-desktop" data-node-id="476:1180">
+          <div class="hero-copy hero-copy-desktop" data-node-id="476:1181">
+            <h1 data-node-id="476:1182">
+              Not a playlist. A <span>show</span>.
+            </h1>
+            <p class="lede" data-node-id="476:1183">
+              WAIV reimagines your music as a realistic radio show, with
+              <span> AI DJs</span> who bring personality, perspective, and
+              surprise.
+            </p>
+          </div>
+
+          <div class="hero-actions hero-actions-desktop" data-node-id="476:1184">
+            <button class="button button-preview" type="button">
+              <span class="button-preview-icon" aria-hidden="true">▶</span>
+              <span>Preview WAIV now</span>
+            </button>
+            <button
+              class="store-badge store-badge-large"
+              type="button"
+              aria-label="Download on the App Store"
+            >
+              <img
+                src="./assets/apple/download-on-the-app-store.svg"
+                alt="Download on the App Store"
+                class="store-badge-image"
+              />
             </button>
           </div>
         </div>
@@ -95,7 +131,8 @@
               <p class="feature-lede" data-node-id="463:560">
                 Instead of playlists, you get
                 <span> live radio-shows hosted by AI DJs</span>. They know your
-                taste. They know your repeats. And they build a show around it.
+                taste. They know your repeats. And they build a show around it.<span class="desktop-copy-extra">
+                  The only thing it's missing? Ads.</span>
               </p>
 
               <div class="feature-list" data-node-id="463:624">
@@ -139,7 +176,7 @@
                 <p>
                   Each DJ has their <span>own voice, energy, and perspective</span>.
                   Some are reflective. Some are energetic. Some take this way too
-                  seriously.
+                  seriously.<span class="desktop-copy-extra"> And one is just plain rude.</span>
                 </p>
                 <p>
                   They introduce songs naturally. React to what just played.
@@ -160,6 +197,7 @@
                   <h3>Casey</h3>
                   <p>Thoughtful. Intentional. Slightly obsessed.</p>
                 </div>
+                <div class="dj-card-play" aria-hidden="true">▶</div>
               </article>
 
               <article class="dj-card">
@@ -172,6 +210,7 @@
                   <h3>Marcus</h3>
                   <p>Energetic. Confident. Keeps it moving.</p>
                 </div>
+                <div class="dj-card-play" aria-hidden="true">▶</div>
               </article>
 
               <article class="dj-card">
@@ -184,6 +223,7 @@
                   <h3>Luna</h3>
                   <p>Calm presence. Late-night energy.</p>
                 </div>
+                <div class="dj-card-play" aria-hidden="true">▶</div>
               </article>
 
               <article class="dj-card">
@@ -196,6 +236,7 @@
                   <h3>Winston</h3>
                   <p>Smooth. Confident. A seasoned voice.</p>
                 </div>
+                <div class="dj-card-play" aria-hidden="true">▶</div>
               </article>
 
               <article class="dj-card">
@@ -208,6 +249,7 @@
                   <h3>Jolene</h3>
                   <p>Warm, sincere. Full of southern charm.</p>
                 </div>
+                <div class="dj-card-play" aria-hidden="true">▶</div>
               </article>
 
               <article class="dj-card">
@@ -220,6 +262,7 @@
                   <h3>John</h3>
                   <p>Relaxed. Curious. Always digging deeper.</p>
                 </div>
+                <div class="dj-card-play" aria-hidden="true">▶</div>
               </article>
 
               <article class="dj-card">
@@ -232,9 +275,98 @@
                   <h3>Tiffany</h3>
                   <p>Sharp. Stylish. Smug. And she knows it.</p>
                 </div>
+                <div class="dj-card-play" aria-hidden="true">▶</div>
               </article>
             </div>
           </section>
+
+          <section class="experience-section" data-node-id="476:1672">
+            <div class="experience-intro" data-node-id="476:1674">
+              <div class="pill" data-node-id="476:1675">
+                <span class="pill-icon"></span>
+                <span>The WAIV experience</span>
+              </div>
+
+              <h2 data-node-id="476:1678">
+                Press <span>play</span>.<br />
+                Enter the station.
+              </h2>
+
+              <div class="experience-steps" data-node-id="476:1746">
+                <article class="experience-step" data-node-id="476:1747">
+                  <div class="experience-step-number">1</div>
+                  <div class="experience-step-copy">
+                    <h3>Connect Apple Music, no separate account needed</h3>
+                    <p>WAIV plays the music you already love.</p>
+                  </div>
+                </article>
+
+                <article class="experience-step" data-node-id="476:1762">
+                  <div class="experience-step-number">2</div>
+                  <div class="experience-step-copy">
+                    <h3>Choose a host</h3>
+                    <p>Pick the DJ whose energy fits the moment.</p>
+                  </div>
+                </article>
+
+                <article class="experience-step" data-node-id="476:1769">
+                  <div class="experience-step-number">3</div>
+                  <div class="experience-step-copy">
+                    <h3>Let the show unfold</h3>
+                    <p>Hear your songs sequenced, introduced, and brought to life.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="experience-media" data-node-id="476:1745">
+              <div class="experience-card experience-card-main">
+                <img
+                  src="./assets/figma/desktop/experience-main.png"
+                  alt="WAIV DJ profile view"
+                  class="experience-image"
+                />
+              </div>
+
+              <div class="experience-card experience-card-phone">
+                <img
+                  src="./assets/figma/desktop/experience-phone.png"
+                  alt="WAIV player on mobile"
+                  class="experience-image"
+                />
+              </div>
+            </div>
+          </section>
+
+          <footer class="site-footer" data-node-id="476:1842">
+            <div class="site-footer-brand" data-node-id="476:1881">
+              <img
+                src="./assets/figma/logo.svg"
+                alt="WAIV"
+                class="wordmark footer-wordmark"
+              />
+              <p>Ready to hear your music as a radio show?</p>
+              <button
+                class="store-badge store-badge-large"
+                type="button"
+                aria-label="Download on the App Store"
+              >
+                <img
+                  src="./assets/apple/download-on-the-app-store.svg"
+                  alt="Download on the App Store"
+                  class="store-badge-image"
+                />
+              </button>
+            </div>
+
+            <div class="site-footer-divider" aria-hidden="true"></div>
+
+            <div class="site-footer-links" data-node-id="476:1888">
+              <span>&copy;2026 WAIV</span>
+              <span>Privacy Policy</span>
+              <span>Get in touch</span>
+            </div>
+          </footer>
         </div>
       </section>
     </div>
