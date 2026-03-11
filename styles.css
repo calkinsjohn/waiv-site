@@ -382,6 +382,10 @@ button {
   line-height: 1.35;
 }
 
+.feature-item span span {
+  color: var(--pink);
+}
+
 .feature-icon {
   width: 11px;
   height: 11px;
@@ -404,6 +408,10 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.studio-image-desktop {
+  display: none;
 }
 
 .djs-section {
@@ -632,6 +640,14 @@ button {
     align-items: start;
   }
 
+  .studio-image-default {
+    display: none;
+  }
+
+  .studio-image-desktop {
+    display: block;
+  }
+
   .feature-copy h2,
   .djs-intro h2,
   .experience-intro h2 {
@@ -657,6 +673,10 @@ button {
 
   .djs-intro {
     max-width: 640px;
+  }
+
+  .djs-secondary {
+    display: none;
   }
 
   .dj-rail {
