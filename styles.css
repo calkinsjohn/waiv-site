@@ -166,6 +166,11 @@ button {
   padding: 80px;
 }
 
+.hero-shell.hero-shell-mobile,
+.hero-shell.hero-shell-desktop {
+  display: none;
+}
+
 .hero-copy {
   flex: 1 1 auto;
   max-width: 800px;
