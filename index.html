@@ -46,6 +46,11 @@
             alt=""
             class="hero-image hero-image-desktop"
           />
+          <img
+            src="./assets/figma/mobile/hero-390.png"
+            alt=""
+            class="hero-image hero-image-mobile"
+          />
         </div>
 
         <header class="topbar" data-node-id="463:527">
@@ -64,7 +69,7 @@
           </button>
         </header>
 
-        <div class="hero-shell hero-shell-default" data-node-id="463:542">
+        <div class="hero-shell hero-shell-default hero-shell-tablet" data-node-id="463:542">
           <div class="hero-copy" data-node-id="463:543">
             <h1 data-node-id="463:544">
               Radio, but it plays <span>your</span> music.
@@ -79,6 +84,38 @@
             <button class="button button-primary hero-cta" type="button">
               <span class="button-icon" aria-hidden="true">▶</span>
               <span>Listen to a sample</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-shell hero-shell-mobile" data-node-id="463:246">
+          <div class="hero-copy hero-copy-mobile" data-node-id="463:247">
+            <h1>
+              Not a playlist.<br />
+              A <span>show</span>.
+            </h1>
+            <p class="lede">
+              WAIV reimagines your music as a
+              <span> realistic radio show</span>, with <span>AI DJs</span> who
+              bring personality, perspective, and surprise.
+            </p>
+          </div>
+
+          <div class="hero-actions hero-actions-mobile" data-node-id="483:1938">
+            <button class="button button-preview button-preview-mobile" type="button">
+              <span class="button-preview-icon button-preview-icon-mobile" aria-hidden="true">▶</span>
+              <span>Preview WAIV now</span>
+            </button>
+            <button
+              class="store-badge store-badge-mobile-hero"
+              type="button"
+              aria-label="Download on the App Store"
+            >
+              <img
+                src="./assets/apple/download-on-the-app-store.svg"
+                alt="Download on the App Store"
+                class="store-badge-image"
+              />
             </button>
           </div>
         </div>
@@ -129,11 +166,16 @@
                 Why WAIV? Because shuffle forgot the <span>fun part</span>.
               </h2>
 
-              <p class="feature-lede" data-node-id="463:560">
+              <p class="feature-lede feature-lede-desktop" data-node-id="463:560">
                 WAIV brings your
                 <span> music back to life in a fun, delightful way</span>. DJs
                 don't just spin your new and old favorites, they tell stories,
                 react to songs, and might even question your skips!
+              </p>
+              <p class="feature-lede feature-lede-mobile">
+                WAIV brings your <span>music back to life</span>. Hear old
+                favorites in a new way, reconnect with songs you forgot you
+                loved, and discover what belongs in the mix next.
               </p>
 
               <div class="feature-list" data-node-id="463:624">
@@ -143,7 +185,8 @@
                 </div>
                 <div class="feature-item" data-node-id="463:628">
                   <span class="feature-icon"></span>
-                  <span>Hosted by distinct AI DJs with their own personalities</span>
+                  <span class="feature-item-desktop">Hosted by distinct AI DJs with their own personalities</span>
+                  <span class="feature-item-mobile">Hosted by a distinct AI DJ with their own personality</span>
                 </div>
                 <div class="feature-item" data-node-id="463:631">
                   <span class="feature-icon"></span>
@@ -157,6 +200,11 @@
                 src="./assets/figma/studio.png"
                 alt="WAIV studio"
                 class="studio-image studio-image-default"
+              />
+              <img
+                src="./assets/figma/mobile/studio-390.png"
+                alt="WAIV studio"
+                class="studio-image studio-image-mobile"
               />
               <img
                 src="./assets/figma/desktop/studio-1440.png"
@@ -179,10 +227,15 @@
               </h2>
 
               <div class="djs-copy" data-node-id="463:577">
-                <p>
+                <p class="djs-copy-primary-desktop">
                   Each DJ has their <span>own voice, energy, and perspective</span>.
                   Some are reflective. Some are energetic. Some are focused.
                   Some are eccentric. And one is just plain rude.
+                </p>
+                <p class="djs-copy-primary-mobile">
+                  Each DJ has their <span>own voice, energy, and perspective</span>.
+                  Some are reflective. Some are energetic. Some take this way too
+                  seriously.
                 </p>
                 <p class="djs-secondary">
                   They introduce songs naturally. React to what just played.
@@ -194,11 +247,14 @@
 
             <div class="dj-rail" data-node-id="463:578">
               <article class="dj-card" data-node-id="463:648">
-                <img
-                  src="./assets/figma/desktop/djs/april.png"
-                  alt="April"
-                  class="dj-card-image"
-                />
+                <picture class="dj-card-picture">
+                  <source media="(max-width: 720px)" srcset="./assets/figma/mobile/djs/april.png" />
+                  <img
+                    src="./assets/figma/desktop/djs/april.png"
+                    alt="April"
+                    class="dj-card-image"
+                  />
+                </picture>
                 <div class="dj-card-body">
                   <h3>April</h3>
                   <p>Thoughtful. Intentional. Slightly obsessed.</p>
@@ -207,11 +263,14 @@
               </article>
 
               <article class="dj-card">
-                <img
-                  src="./assets/figma/desktop/djs/marcus.png"
-                  alt="Marcus"
-                  class="dj-card-image"
-                />
+                <picture class="dj-card-picture">
+                  <source media="(max-width: 720px)" srcset="./assets/figma/mobile/djs/marcus.png" />
+                  <img
+                    src="./assets/figma/desktop/djs/marcus.png"
+                    alt="Marcus"
+                    class="dj-card-image"
+                  />
+                </picture>
                 <div class="dj-card-body">
                   <h3>Marcus</h3>
                   <p>Energetic. Confident. Keeps it moving.</p>
@@ -220,11 +279,14 @@
               </article>
 
               <article class="dj-card">
-                <img
-                  src="./assets/figma/desktop/djs/luna.png"
-                  alt="Luna"
-                  class="dj-card-image"
-                />
+                <picture class="dj-card-picture">
+                  <source media="(max-width: 720px)" srcset="./assets/figma/mobile/djs/luna.png" />
+                  <img
+                    src="./assets/figma/desktop/djs/luna.png"
+                    alt="Luna"
+                    class="dj-card-image"
+                  />
+                </picture>
                 <div class="dj-card-body">
                   <h3>Luna</h3>
                   <p>Calm presence. Late-night energy.</p>
@@ -233,11 +295,14 @@
               </article>
 
               <article class="dj-card">
-                <img
-                  src="./assets/figma/desktop/djs/winston.png"
-                  alt="Winston"
-                  class="dj-card-image"
-                />
+                <picture class="dj-card-picture">
+                  <source media="(max-width: 720px)" srcset="./assets/figma/mobile/djs/winston.png" />
+                  <img
+                    src="./assets/figma/desktop/djs/winston.png"
+                    alt="Winston"
+                    class="dj-card-image"
+                  />
+                </picture>
                 <div class="dj-card-body">
                   <h3>Winston</h3>
                   <p>Smooth. Confident. A seasoned voice.</p>
@@ -246,11 +311,14 @@
               </article>
 
               <article class="dj-card">
-                <img
-                  src="./assets/figma/desktop/djs/jolene.png"
-                  alt="Jolene"
-                  class="dj-card-image"
-                />
+                <picture class="dj-card-picture">
+                  <source media="(max-width: 720px)" srcset="./assets/figma/mobile/djs/jolene.png" />
+                  <img
+                    src="./assets/figma/desktop/djs/jolene.png"
+                    alt="Jolene"
+                    class="dj-card-image"
+                  />
+                </picture>
                 <div class="dj-card-body">
                   <h3>Jolene</h3>
                   <p>Warm, sincere. Full of southern charm.</p>
@@ -259,11 +327,14 @@
               </article>
 
               <article class="dj-card">
-                <img
-                  src="./assets/figma/desktop/djs/john.png"
-                  alt="John"
-                  class="dj-card-image"
-                />
+                <picture class="dj-card-picture">
+                  <source media="(max-width: 720px)" srcset="./assets/figma/mobile/djs/john.png" />
+                  <img
+                    src="./assets/figma/desktop/djs/john.png"
+                    alt="John"
+                    class="dj-card-image"
+                  />
+                </picture>
                 <div class="dj-card-body">
                   <h3>John</h3>
                   <p>Relaxed. Curious. Always digging deeper.</p>
@@ -272,11 +343,14 @@
               </article>
 
               <article class="dj-card">
-                <img
-                  src="./assets/figma/desktop/djs/tiffany.png"
-                  alt="Tiffany"
-                  class="dj-card-image"
-                />
+                <picture class="dj-card-picture">
+                  <source media="(max-width: 720px)" srcset="./assets/figma/mobile/djs/tiffany.png" />
+                  <img
+                    src="./assets/figma/desktop/djs/tiffany.png"
+                    alt="Tiffany"
+                    class="dj-card-image"
+                  />
+                </picture>
                 <div class="dj-card-body">
                   <h3>Tiffany</h3>
                   <p>Sharp. Stylish. Smug. And she knows it.</p>
@@ -285,11 +359,14 @@
               </article>
 
               <article class="dj-card">
-                <img
-                  src="./assets/figma/desktop/djs/robert.png"
-                  alt="RØB-3RT"
-                  class="dj-card-image"
-                />
+                <picture class="dj-card-picture">
+                  <source media="(max-width: 720px)" srcset="./assets/figma/mobile/djs/robert.png" />
+                  <img
+                    src="./assets/figma/desktop/djs/robert.png"
+                    alt="RØB-3RT"
+                    class="dj-card-image"
+                  />
+                </picture>
                 <div class="dj-card-body">
                   <h3>RØB-3RT</h3>
                   <p>&gt;&gt;??&gt;&gt; // /<br />? [[ // - ? &lt;&lt;&gt;&gt;</p>
@@ -340,19 +417,25 @@
 
             <div class="experience-media" data-node-id="476:1745">
               <div class="experience-card experience-card-main">
-                <img
-                  src="./assets/figma/desktop/experience-main.png"
-                  alt="WAIV DJ profile view"
-                  class="experience-image"
-                />
+                <picture class="experience-picture">
+                  <source media="(max-width: 720px)" srcset="./assets/figma/mobile/experience-main.png" />
+                  <img
+                    src="./assets/figma/desktop/experience-main.png"
+                    alt="WAIV DJ profile view"
+                    class="experience-image"
+                  />
+                </picture>
               </div>
 
               <div class="experience-card experience-card-phone">
-                <img
-                  src="./assets/figma/desktop/experience-phone.png"
-                  alt="WAIV player on mobile"
-                  class="experience-image"
-                />
+                <picture class="experience-picture">
+                  <source media="(max-width: 720px)" srcset="./assets/figma/mobile/experience-phone.png" />
+                  <img
+                    src="./assets/figma/desktop/experience-phone.png"
+                    alt="WAIV player on mobile"
+                    class="experience-image"
+                  />
+                </picture>
               </div>
             </div>
           </section>
