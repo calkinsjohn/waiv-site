@@ -836,7 +836,7 @@ button {
   }
 }
 
-@media (min-width: 721px) and (max-width: 1023px) {
+@media (min-width: 760px) and (max-width: 1023px) {
   .topbar {
     padding: 20px;
   }
@@ -971,10 +971,12 @@ button {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 759px) {
   .hero-video,
   .hero-image-desktop,
-  .hero-shell-tablet {
+  .hero-shell-default,
+  .hero-shell-tablet,
+  .hero-shell-desktop {
     display: none;
   }
 
@@ -992,6 +994,7 @@ button {
   .feature-lede-desktop,
   .feature-item-desktop,
   .djs-copy-primary-desktop,
+  .djs-secondary,
   .studio-image-default,
   .studio-image-desktop {
     display: none;
