@@ -1283,10 +1283,14 @@ button {
     padding: 24px;
     border: 1px solid var(--purple);
     border-radius: 24px;
-    background: var(--surface);
+    background:
+      radial-gradient(circle at 0% 0%, rgba(244, 68, 172, 0.12), transparent 34%),
+      radial-gradient(circle at 100% 100%, rgba(186, 126, 244, 0.1), transparent 42%),
+      linear-gradient(180deg, rgba(18, 2, 24, 0.98) 0%, rgba(10, 4, 18, 0.98) 100%);
     box-shadow:
-      0 0 24px rgba(216, 84, 242, 0.12),
-      inset 0 0 40px rgba(0, 0, 0, 1);
+      0 0 0 1px rgba(244, 68, 172, 0.08),
+      0 0 30px rgba(216, 84, 242, 0.14),
+      inset 0 0 40px rgba(0, 0, 0, 0.48);
   }
 
   .story-quote {
