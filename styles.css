@@ -277,6 +277,11 @@ button {
   font-family: var(--font-expanded);
   font-size: 20px;
   text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .button-preview-icon {
@@ -290,6 +295,39 @@ button {
   color: var(--surface);
   font-size: 16px;
   line-height: 1;
+  box-shadow: 0 0 12px rgba(244, 68, 172, 0.18);
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+@media (hover: hover) {
+  .button-preview:hover {
+    border-color: #d498f6;
+    box-shadow:
+      0 0 0 1px rgba(212, 152, 246, 0.28),
+      0 0 24px rgba(186, 126, 244, 0.28),
+      0 0 44px rgba(244, 68, 172, 0.16);
+    transform: translateY(-1px);
+  }
+
+  .button-preview:hover .button-preview-icon {
+    box-shadow: 0 0 20px rgba(244, 68, 172, 0.4);
+    transform: scale(1.04);
+  }
+}
+
+.button-preview:focus-visible {
+  outline: none;
+  border-color: #d498f6;
+  box-shadow:
+    0 0 0 1px rgba(212, 152, 246, 0.28),
+    0 0 24px rgba(186, 126, 244, 0.28),
+    0 0 44px rgba(244, 68, 172, 0.16);
+}
+
+.button-preview:focus-visible .button-preview-icon {
+  box-shadow: 0 0 20px rgba(244, 68, 172, 0.4);
 }
 
 .button-light {
