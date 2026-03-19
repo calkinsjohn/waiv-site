@@ -51,6 +51,7 @@
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
+  --copy-letter-spacing: 0.02em;
 }
 
 *,
@@ -221,7 +222,7 @@ button {
   font-size: 32px;
   line-height: 1.28;
   font-weight: 400;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--copy-letter-spacing);
 }
 
 .hero-actions {
@@ -245,6 +246,7 @@ button {
   font-size: 18px;
   font-weight: 500;
   color: var(--text);
+  letter-spacing: var(--copy-letter-spacing);
 }
 
 .button-small {
@@ -386,6 +388,7 @@ button {
   color: var(--text-soft);
   font-size: 18px;
   line-height: 1;
+  letter-spacing: var(--copy-letter-spacing);
 }
 
 .pill-icon {
@@ -411,7 +414,7 @@ button {
   font-size: 24px;
   line-height: 1.28;
   font-weight: 400;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--copy-letter-spacing);
 }
 
 .djs-copy p {
@@ -449,6 +452,7 @@ button {
   color: var(--text);
   font-size: 16px;
   line-height: 1.35;
+  letter-spacing: var(--copy-letter-spacing);
 }
 
 .feature-icon {
@@ -545,7 +549,7 @@ button {
   color: var(--text-muted);
   font-size: 24px;
   line-height: 1.28;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--copy-letter-spacing);
 }
 
 .experience-section {
@@ -556,7 +560,7 @@ button {
   margin: 0;
   color: var(--purple);
   font-family: var(--font-rounded);
-  letter-spacing: 0.256px;
+  letter-spacing: var(--copy-letter-spacing);
 }
 
 .story-attribution {
@@ -592,6 +596,7 @@ button {
   color: var(--text-muted);
   font-size: 16px;
   line-height: 1.2;
+  letter-spacing: var(--copy-letter-spacing);
 }
 
 .experience-steps {
@@ -638,6 +643,7 @@ button {
   font-size: 16px;
   line-height: 1.2;
   color: var(--purple);
+  letter-spacing: var(--copy-letter-spacing);
 }
 
 .experience-card {
@@ -671,6 +677,7 @@ button {
   font-family: var(--font-expanded);
   font-size: 24px;
   line-height: 32px;
+  letter-spacing: var(--copy-letter-spacing);
   text-shadow: var(--hero-shadow);
 }
 
@@ -686,6 +693,7 @@ button {
   gap: 24px;
   font-size: 16px;
   line-height: 32px;
+  letter-spacing: var(--copy-letter-spacing);
 }
 
 @media (min-width: 1024px) {
@@ -832,7 +840,7 @@ button {
     margin-top: 12px;
     font-size: 16px;
     line-height: 1.2;
-    letter-spacing: 0;
+    letter-spacing: var(--copy-letter-spacing);
   }
 
   .dj-card-play {
@@ -1384,7 +1392,7 @@ button {
     margin-top: 8px;
     font-size: 16px;
     line-height: 1;
-    letter-spacing: 0.008em;
+    letter-spacing: var(--copy-letter-spacing);
   }
 
   .experience-section {
