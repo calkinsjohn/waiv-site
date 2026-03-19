@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0d0c14" />
+    <meta
+      name="theme-color"
+      content="#0d0c14"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta name="color-scheme" content="dark" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Privacy Policy | WAIV</title>
+    <meta
+      name="description"
+      content="Read the WAIV privacy policy and learn how WAIV handles user data."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" href="/assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .legal-page {
+        --legal-page-top: var(--page-top, #0a0005);
+        --legal-page-bottom: var(--page-bottom, #120021);
+        --legal-surface: var(--surface, #0d0c14);
+        --legal-text: var(--text, #f0e1ff);
+        --legal-text-soft: var(--text-soft, #b7b4c3);
+        --legal-text-muted: var(--text-muted, #7b7a84);
+        --legal-pink: var(--pink, #f444ac);
+        --legal-purple: var(--purple, #ba7ef4);
+        --legal-hero-shadow: var(--hero-shadow, 0 0 12px rgba(0, 0, 0, 0.8));
+        --legal-copy-spacing: var(--copy-letter-spacing, 0.02em);
+      }
+
+      html,
+      body {
+        min-height: 100%;
+      }
+
+      body {
+        margin: 0;
+        color: var(--legal-text);
+        background:
+          linear-gradient(180deg, rgba(14, 2, 15, 0) 0%, rgba(14, 2, 15, 0.72) 44%, #0e020f 70%, var(--legal-surface) 100%),
+          linear-gradient(135.36deg, var(--legal-page-top) 0%, var(--legal-page-bottom) 100%);
+        font-family: var(--font-body);
+        -webkit-text-size-adjust: 100%;
+      }
+
+      .legal-page {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        min-height: 100svh;
+        min-height: 100dvh;
+      }
+
+      .legal-topbar {
+        padding: 20px 24px;
+      }
+
+      .legal-topbar-inner,
+      .legal-footer-inner {
+        width: min(1280px, 100%);
+        margin: 0 auto;
+      }
+
+      .legal-topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .legal-home-link {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .legal-back-link,
+      .legal-footer a {
+        color: var(--legal-text-soft);
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 1.2;
+        letter-spacing: var(--legal-copy-spacing);
+        transition: color 180ms ease;
+      }
+
+      .legal-back-link:hover,
+      .legal-back-link:focus-visible,
+      .legal-footer a:hover,
+      .legal-footer a:focus-visible {
+        color: var(--legal-pink);
+      }
+
+      .legal-home-link:focus-visible,
+      .legal-back-link:focus-visible,
+      .legal-footer a:focus-visible {
+        outline: 2px solid rgba(244, 68, 172, 0.75);
+        outline-offset: 4px;
+      }
+
+      .legal-main {
+        flex: 1 1 auto;
+        padding: 48px 24px 96px;
+      }
+
+      .legal-shell {
+        width: min(820px, 100%);
+        margin: 0 auto;
+      }
+
+      .legal-pill {
+        margin-bottom: 24px;
+      }
+
+      .legal-card {
+        padding: 40px;
+        border: 1px solid rgba(186, 126, 244, 0.24);
+        border-radius: 28px;
+        background:
+          radial-gradient(circle at top left, rgba(244, 68, 172, 0.08), transparent 28%),
+          linear-gradient(180deg, rgba(18, 2, 24, 0.96) 0%, rgba(11, 8, 19, 0.98) 100%);
+        box-shadow:
+          0 0 0 1px rgba(244, 68, 172, 0.05),
+          0 24px 80px rgba(0, 0, 0, 0.28);
+      }
+
+      .legal-header h1,
+      .legal-section h2 {
+        margin: 0;
+        font-family: var(--font-expanded);
+        font-stretch: expanded;
+      }
+
+      .legal-header h1 {
+        font-size: clamp(40px, 6vw, 56px);
+        line-height: 1.02;
+        letter-spacing: -0.045em;
+        text-shadow: var(--legal-hero-shadow);
+      }
+
+      .legal-effective-date {
+        margin: 16px 0 0;
+        color: var(--legal-purple);
+        font-size: 15px;
+        line-height: 1.4;
+        letter-spacing: var(--legal-copy-spacing);
+      }
+
+      .legal-intro,
+      .legal-section p,
+      .legal-section li {
+        font-size: 18px;
+        line-height: 1.65;
+        letter-spacing: var(--legal-copy-spacing);
+      }
+
+      .legal-intro {
+        margin: 28px 0 0;
+        color: var(--legal-text);
+      }
+
+      .legal-section {
+        margin-top: 32px;
+        padding-top: 32px;
+        border-top: 1px solid rgba(186, 126, 244, 0.18);
+      }
+
+      .legal-section h2 {
+        margin-bottom: 16px;
+        font-size: 24px;
+        line-height: 1.12;
+        letter-spacing: -0.03em;
+      }
+
+      .legal-section p {
+        margin: 0;
+        color: var(--legal-text-soft);
+      }
+
+      .legal-section p + p,
+      .legal-section ul + p {
+        margin-top: 16px;
+      }
+
+      .legal-section ul {
+        margin: 16px 0;
+        padding-left: 22px;
+        color: var(--legal-text-soft);
+      }
+
+      .legal-section li + li {
+        margin-top: 10px;
+      }
+
+      .legal-inline-accent {
+        color: var(--legal-pink);
+        font-weight: 600;
+      }
+
+      .legal-footer {
+        padding: 0 24px 40px;
+      }
+
+      .legal-footer-inner {
+        width: min(820px, 100%);
+        margin: 0 auto;
+        padding-top: 24px;
+        border-top: 1px solid rgba(186, 126, 244, 0.18);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        color: var(--legal-text-muted);
+        font-size: 15px;
+        line-height: 1.4;
+        letter-spacing: var(--legal-copy-spacing);
+      }
+
+      .legal-footer a[aria-current="page"] {
+        color: var(--legal-text);
+      }
+
+      @media (max-width: 759px) {
+        .legal-topbar {
+          padding: 20px;
+        }
+
+        .legal-main {
+          padding: 32px 20px 72px;
+        }
+
+        .legal-card {
+          padding: 28px 20px;
+          border-radius: 24px;
+        }
+
+        .legal-header h1 {
+          font-size: 34px;
+          line-height: 1.05;
+        }
+
+        .legal-intro,
+        .legal-section p,
+        .legal-section li {
+          font-size: 16px;
+          line-height: 1.6;
+        }
+
+        .legal-section {
+          margin-top: 24px;
+          padding-top: 24px;
+        }
+
+        .legal-section h2 {
+          font-size: 20px;
+        }
+
+        .legal-footer {
+          padding: 0 20px 32px;
+        }
+
+        .legal-footer-inner {
+          flex-wrap: wrap;
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page legal-page">
+      <header class="topbar legal-topbar">
+        <div class="legal-topbar-inner">
+          <a href="/" class="legal-home-link" aria-label="Back to WAIV home">
+            <img
+              src="/assets/figma/logo.svg"
+              alt="WAIV"
+              class="wordmark"
+            />
+          </a>
+          <a class="legal-back-link" href="/">Back home</a>
+        </div>
+      </header>
+
+      <main class="legal-main">
+        <div class="legal-shell">
+          <div class="pill legal-pill">
+            <span class="pill-icon"></span>
+            <span>Privacy Policy</span>
+          </div>
+
+          <article class="legal-card">
+            <header class="legal-header">
+              <h1>Privacy Policy</h1>
+              <p class="legal-effective-date">
+                Effective date:
+                <time data-effective-date datetime="">Loading...</time>
+              </p>
+              <p class="legal-intro">
+                WAIV is built to be personal without being invasive. We do not collect,
+                store, sell, or share personal user data. The only thing WAIV requires
+                is access to your Apple Music account so the app can create and play
+                your DJ-style listening experience.
+              </p>
+            </header>
+
+            <section class="legal-section" aria-labelledby="what-waiv-does">
+              <h2 id="what-waiv-does">1. What WAIV does</h2>
+              <p>
+                WAIV lets you connect your Apple Music account so the app can create
+                and play personalized DJ-style listening experiences using your music
+                library and listening context.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="information-we-collect">
+              <h2 id="information-we-collect">2. Information we collect</h2>
+              <p>WAIV does not collect personal information such as:</p>
+              <ul>
+                <li>name</li>
+                <li>email address</li>
+                <li>phone number</li>
+                <li>location</li>
+                <li>uploaded content</li>
+                <li>in-app profiles or account details</li>
+              </ul>
+              <p>
+                WAIV also does not sell, rent, or share user data with advertisers or
+                data brokers.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="apple-music-connection">
+              <h2 id="apple-music-connection">3. Apple Music connection</h2>
+              <p>
+                To use WAIV, you must connect your Apple Music account. This
+                connection is required so WAIV can access the music needed to power
+                the experience.
+              </p>
+              <p>
+                WAIV uses Apple Music access only to enable app functionality, such
+                as:
+              </p>
+              <ul>
+                <li>reading your available music library and catalog context</li>
+                <li>generating stations or DJ experiences based on your music</li>
+                <li>playing music through Apple Music</li>
+              </ul>
+              <p>
+                WAIV does not independently store your Apple Music account
+                credentials.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="purchases-and-subscriptions">
+              <h2 id="purchases-and-subscriptions">4. In-app purchases and subscriptions</h2>
+              <p>
+                WAIV may offer in-app purchases or subscriptions. All purchases are
+                processed by Apple through the App Store.
+              </p>
+              <p>
+                WAIV does not collect, process, or store your payment card
+                information or billing details. Payment information is handled by
+                Apple in accordance with Apple&rsquo;s own terms and privacy practices.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="analytics-and-tracking">
+              <h2 id="analytics-and-tracking">5. Analytics and tracking</h2>
+              <p>
+                WAIV does not use third-party advertising trackers or create personal
+                behavioral advertising profiles.
+              </p>
+              <p>
+                If this changes in the future, this policy will be updated before
+                those tools are introduced.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="data-storage">
+              <h2 id="data-storage">6. Data storage</h2>
+              <p>
+                Because WAIV does not collect personal user data, we do not maintain
+                personal data records for app users beyond what is technically
+                necessary for the app to function in real time.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="childrens-privacy">
+              <h2 id="childrens-privacy">7. Children&rsquo;s privacy</h2>
+              <p>
+                WAIV is not directed to children under 13, and we do not knowingly
+                collect personal information from children.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="changes-to-this-policy">
+              <h2 id="changes-to-this-policy">8. Changes to this policy</h2>
+              <p>
+                If we make changes to this Privacy Policy, we will update this page
+                and revise the effective date above.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="contact">
+              <h2 id="contact">9. Contact</h2>
+              <p>
+                If you have questions about this Privacy Policy, contact us at
+                <span class="legal-inline-accent" data-contact-email>[INSERT CONTACT EMAIL]</span>.
+              </p>
+            </section>
+          </article>
+        </div>
+      </main>
+
+      <footer class="legal-footer">
+        <div class="legal-footer-inner">
+          <span>&copy;2026 WAIV</span>
+          <a href="/">Home</a>
+          <a href="/assets/privacy.html" aria-current="page">Privacy Policy</a>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (() => {
+        const policyMeta = {
+          effectiveDate: {
+            datetime: "2026-03-18",
+            label: "March 18, 2026",
+          },
+          contactEmail: "[INSERT CONTACT EMAIL]",
+        };
+
+        const effectiveDate = document.querySelector("[data-effective-date]");
+        const contactEmail = document.querySelector("[data-contact-email]");
+
+        if (effectiveDate) {
+          effectiveDate.dateTime = policyMeta.effectiveDate.datetime;
+          effectiveDate.textContent = policyMeta.effectiveDate.label;
+        }
+
+        if (contactEmail) {
+          contactEmail.textContent = policyMeta.contactEmail;
+        }
+      })();
+    </script>
+  </body>
+</html>
