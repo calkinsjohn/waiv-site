@@ -679,8 +679,10 @@ button.dj-card-play.is-playing::before {
   height: 64px;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid rgba(186, 126, 244, 0.32);
-  box-shadow: 0 0 18px rgba(244, 68, 172, 0.14);
+  border: 2px solid var(--pink);
+  box-shadow:
+    0 0 0 1px rgba(244, 68, 172, 0.16),
+    0 0 16px rgba(244, 68, 172, 0.24);
 }
 
 .story-meta h3,
@@ -1497,8 +1499,10 @@ button.dj-card-play.is-playing::before {
     width: 48px;
     height: 48px;
     border-radius: 999px;
-    border-color: var(--purple);
-    box-shadow: none;
+    border-color: var(--pink);
+    box-shadow:
+      0 0 0 1px rgba(244, 68, 172, 0.14),
+      0 0 12px rgba(244, 68, 172, 0.2);
   }
 
   .story-meta {
