@@ -842,17 +842,17 @@ button {
   .dj-card-play {
     position: absolute;
     top: 200px;
-    right: 20px;
+    right: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 46px;
     border-radius: 999px;
     transform: translateY(-50%);
     background: linear-gradient(180deg, var(--purple) 0%, var(--pink) 100%);
     color: var(--surface);
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1;
   }
 
@@ -1292,17 +1292,17 @@ button {
   .dj-card-play {
     position: absolute;
     top: 128px;
-    right: 23px;
+    right: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 28px;
-    height: 28px;
+    width: 34px;
+    height: 34px;
     border-radius: 999px;
     transform: translateY(-50%);
     background: linear-gradient(180deg, var(--purple) 0%, var(--pink) 100%);
     color: var(--surface);
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1;
   }
 
