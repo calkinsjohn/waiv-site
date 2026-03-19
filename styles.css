@@ -497,8 +497,9 @@ button {
   grid-auto-flow: column;
   grid-auto-columns: minmax(320px, 392px);
   gap: 32px;
-  width: calc(100vw - ((100vw - 100%) / 2));
+  width: 100vw;
   max-width: none;
+  margin-left: calc((100vw - 100%) / -2);
   overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: 12px;
@@ -1285,7 +1286,7 @@ button {
     grid-auto-flow: column;
     grid-auto-columns: 184px;
     gap: 20px;
-    width: calc(100vw - ((100vw - 100%) / 2));
+    width: 100vw;
     overflow-x: auto;
     overflow-y: hidden;
     padding-bottom: 8px;
