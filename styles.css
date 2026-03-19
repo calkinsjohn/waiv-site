@@ -504,6 +504,9 @@ button {
 
 .story-quote {
   margin: 0;
+  color: var(--purple);
+  font-family: var(--font-rounded);
+  letter-spacing: 0.256px;
 }
 
 .story-attribution {
@@ -851,8 +854,6 @@ button {
     max-width: 1140px;
     font-size: 24px;
     line-height: 1.34;
-    letter-spacing: -0.02em;
-    color: var(--text);
   }
 
   .story-attribution {
@@ -1295,11 +1296,8 @@ button {
 
   .story-quote {
     max-width: none;
-    color: var(--purple);
-    font-family: var(--font-rounded);
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: 0.008em;
   }
 
   .story-attribution {
