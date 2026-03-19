@@ -485,6 +485,7 @@ button {
 
 .dj-card-body h3 {
   margin: 0;
+  font-family: var(--font-expanded);
   font-size: 32px;
   line-height: 1.08;
   font-weight: 600;
