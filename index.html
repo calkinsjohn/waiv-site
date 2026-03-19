@@ -574,12 +574,156 @@
             <div class="site-footer-links" data-node-id="476:1888">
               <span>&copy;2026 WAIV</span>
               <a class="site-footer-link" href="/assets/privacy.html">Privacy Policy</a>
-              <span>Get in touch</span>
+              <button
+                class="site-footer-link site-footer-link-button"
+                type="button"
+                data-contact-open
+                aria-haspopup="dialog"
+                aria-controls="contact-modal"
+                aria-expanded="false"
+              >
+                Get in touch
+              </button>
             </div>
           </footer>
         </div>
       </section>
     </div>
+
+    <div class="contact-modal" data-contact-modal hidden>
+      <div class="contact-modal-backdrop" data-contact-close></div>
+      <div
+        class="contact-modal-dialog"
+        id="contact-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contact-modal-title"
+        aria-describedby="contact-modal-description"
+      >
+        <div class="contact-modal-card" tabindex="-1" data-contact-panel>
+          <section class="contact-modal-view" data-contact-form-view>
+            <div class="contact-modal-header">
+              <div class="contact-modal-header-copy">
+                <div class="pill contact-modal-pill">
+                  <span class="pill-icon"></span>
+                  <span>Get in touch</span>
+                </div>
+                <h2 id="contact-modal-title">Message the station</h2>
+                <p id="contact-modal-description">
+                  Questions, feedback, or something not working? We read everything.
+                  No bots, no spam.
+                </p>
+              </div>
+              <button
+                class="contact-modal-close"
+                type="button"
+                data-contact-close
+                aria-label="Close contact form"
+              ></button>
+            </div>
+
+            <form class="contact-form" data-contact-form novalidate>
+              <div class="contact-field">
+                <label class="contact-label" for="contact-email">Email</label>
+                <input
+                  class="contact-control"
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  inputmode="email"
+                  autocomplete="email"
+                  placeholder="you@email.com"
+                  required
+                />
+                <p class="contact-field-error" data-error-for="email" aria-live="polite"></p>
+              </div>
+
+              <div class="contact-field">
+                <label class="contact-label" for="contact-topic">What&rsquo;s this about?</label>
+                <div class="contact-select-wrap">
+                  <select class="contact-control contact-select" id="contact-topic" name="topic">
+                    <option value="">Select a topic</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Bug / something's broken">Bug / something&rsquo;s broken</option>
+                    <option value="Subscription question">Subscription question</option>
+                    <option value="Just saying hi">Just saying hi</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="contact-field contact-field-message">
+                <label class="contact-label" for="contact-message">Message</label>
+                <textarea
+                  class="contact-control contact-textarea"
+                  id="contact-message"
+                  name="message"
+                  rows="5"
+                  placeholder="What&rsquo;s on your mind?"
+                  required
+                ></textarea>
+                <p class="contact-field-error" data-error-for="message" aria-live="polite"></p>
+              </div>
+
+              <div class="contact-field contact-field-honeypot" aria-hidden="true">
+                <label class="contact-label" for="contact-company">Leave this blank</label>
+                <input
+                  class="contact-control"
+                  id="contact-company"
+                  name="company"
+                  type="text"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="contact-form-footer">
+                <p class="contact-helper">
+                  We only use your email to respond. Nothing else.
+                </p>
+                <p class="contact-submit-error" data-contact-submit-error aria-live="polite" hidden>
+                  Something went wrong. Try again or email us directly.
+                </p>
+                <button
+                  class="button button-primary contact-submit"
+                  type="submit"
+                  data-contact-submit
+                  disabled
+                >
+                  <span data-contact-submit-label>Send message</span>
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <section class="contact-modal-view contact-success-view" data-contact-success-view hidden>
+            <div class="contact-modal-header contact-modal-header-success">
+              <div class="contact-modal-header-copy">
+                <div class="pill contact-modal-pill">
+                  <span class="pill-icon"></span>
+                  <span>Message sent</span>
+                </div>
+                <h2 id="contact-success-title">Signal received</h2>
+                <p id="contact-success-description">We&rsquo;ll be in touch.</p>
+                <p class="contact-success-supporting">Usually within 24&ndash;48 hours.</p>
+              </div>
+              <button
+                class="contact-modal-close"
+                type="button"
+                data-contact-close
+                aria-label="Close contact form"
+              ></button>
+            </div>
+
+            <div class="contact-success-actions">
+              <button class="button button-primary contact-submit" type="button" data-contact-close>
+                Close
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
     <script>
       (() => {
         const previewButtons = Array.from(document.querySelectorAll("button.dj-card-play[data-audio-src]"));
@@ -651,6 +795,307 @@
             setButtonState(activeButton, false);
           }
         });
+      })();
+
+      (() => {
+        const contactConfig = {
+          endpoint: "",
+          directEmail: "",
+        };
+
+        const modal = document.querySelector("[data-contact-modal]");
+        const dialog = document.querySelector(".contact-modal-dialog");
+        const panel = document.querySelector("[data-contact-panel]");
+        const openButtons = Array.from(document.querySelectorAll("[data-contact-open]"));
+        const closeButtons = Array.from(document.querySelectorAll("[data-contact-close]"));
+        const form = document.querySelector("[data-contact-form]");
+        const formView = document.querySelector("[data-contact-form-view]");
+        const successView = document.querySelector("[data-contact-success-view]");
+        const submitButton = document.querySelector("[data-contact-submit]");
+        const submitLabel = document.querySelector("[data-contact-submit-label]");
+        const submitError = document.querySelector("[data-contact-submit-error]");
+        const emailInput = document.querySelector("#contact-email");
+        const topicInput = document.querySelector("#contact-topic");
+        const messageInput = document.querySelector("#contact-message");
+        const honeypotInput = document.querySelector("#contact-company");
+
+        if (!modal || !dialog || !panel || !form || !submitButton || !submitLabel || !emailInput || !messageInput || !honeypotInput) {
+          return;
+        }
+
+        const fieldState = {
+          email: { touched: false },
+          message: { touched: false },
+        };
+
+        let modalVisible = false;
+        let isSubmitting = false;
+        let previouslyFocusedElement = null;
+        let closeTimer = null;
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        const getErrorElement = (name) =>
+          form.querySelector(`[data-error-for="${name}"]`);
+
+        const validateField = (name) => {
+          if (name === "email") {
+            const value = emailInput.value.trim();
+            if (!value) return "Email is required.";
+            if (!emailPattern.test(value)) return "Enter a valid email.";
+            return "";
+          }
+
+          if (name === "message") {
+            const value = messageInput.value.trim();
+            if (!value) return "Message is required.";
+            return "";
+          }
+
+          return "";
+        };
+
+        const setFieldError = (name, message) => {
+          const field = name === "email" ? emailInput : messageInput;
+          const errorElement = getErrorElement(name);
+          if (!field || !errorElement) return;
+
+          if (message) {
+            field.setAttribute("aria-invalid", "true");
+            errorElement.textContent = message;
+          } else {
+            field.removeAttribute("aria-invalid");
+            errorElement.textContent = "";
+          }
+        };
+
+        const updateFieldErrors = ({ force = false } = {}) => {
+          ["email", "message"].forEach((name) => {
+            const shouldShow = force || fieldState[name].touched;
+            setFieldError(name, shouldShow ? validateField(name) : "");
+          });
+        };
+
+        const formIsValid = () =>
+          !validateField("email") && !validateField("message");
+
+        const updateSubmitState = () => {
+          submitButton.disabled = isSubmitting || !formIsValid();
+        };
+
+        const setSubmittingState = (submitting) => {
+          isSubmitting = submitting;
+          modal.classList.toggle("is-submitting", submitting);
+          submitButton.disabled = submitting || !formIsValid();
+          submitButton.setAttribute("aria-busy", String(submitting));
+          submitLabel.textContent = submitting ? "Sending..." : "Send message";
+        };
+
+        const resetStatus = () => {
+          submitError.hidden = true;
+          submitError.textContent = "Something went wrong. Try again or email us directly.";
+        };
+
+        const showSubmitError = () => {
+          if (contactConfig.directEmail) {
+            submitError.innerHTML = `Something went wrong. Try again or <a class="contact-inline-link" href="mailto:${contactConfig.directEmail}">email us directly</a>.`;
+          } else {
+            submitError.textContent = "Something went wrong. Try again or email us directly.";
+          }
+          submitError.hidden = false;
+        };
+
+        const resetFormState = () => {
+          window.clearTimeout(closeTimer);
+          form.reset();
+          fieldState.email.touched = false;
+          fieldState.message.touched = false;
+          resetStatus();
+          setFieldError("email", "");
+          setFieldError("message", "");
+          setSubmittingState(false);
+          formView.hidden = false;
+          successView.hidden = true;
+          modal.classList.remove("is-success");
+          dialog.setAttribute("aria-labelledby", "contact-modal-title");
+          dialog.setAttribute("aria-describedby", "contact-modal-description");
+          updateSubmitState();
+        };
+
+        const getFocusableElements = () => {
+          const container = successView.hidden ? formView : successView;
+          return Array.from(
+            container.querySelectorAll(
+              'a[href], button:not([disabled]), input:not([type="hidden"]):not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+            )
+          ).filter((element) => !element.hidden && element.offsetParent !== null);
+        };
+
+        const focusInitialElement = () => {
+          const focusTarget = successView.hidden ? emailInput : successView.querySelector("[data-contact-close]");
+          (focusTarget || panel).focus();
+        };
+
+        const handleKeydown = (event) => {
+          if (!modalVisible) return;
+
+          if (event.key === "Escape") {
+            event.preventDefault();
+            closeModal();
+            return;
+          }
+
+          if (event.key !== "Tab") return;
+
+          const focusableElements = getFocusableElements();
+          if (!focusableElements.length) {
+            event.preventDefault();
+            panel.focus();
+            return;
+          }
+
+          const first = focusableElements[0];
+          const last = focusableElements[focusableElements.length - 1];
+
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        };
+
+        const openModal = (trigger) => {
+          previouslyFocusedElement = trigger || document.activeElement;
+          resetFormState();
+          modal.hidden = false;
+          document.body.classList.add("modal-open");
+          openButtons.forEach((button) => button.setAttribute("aria-expanded", "true"));
+          requestAnimationFrame(() => {
+            modal.classList.add("is-visible");
+            focusInitialElement();
+          });
+          document.addEventListener("keydown", handleKeydown);
+          modalVisible = true;
+        };
+
+        const closeModal = () => {
+          if (!modalVisible) return;
+
+          modal.classList.remove("is-visible");
+          document.body.classList.remove("modal-open");
+          document.removeEventListener("keydown", handleKeydown);
+          openButtons.forEach((button) => button.setAttribute("aria-expanded", "false"));
+          modalVisible = false;
+
+          closeTimer = window.setTimeout(() => {
+            modal.hidden = true;
+            if (previouslyFocusedElement && typeof previouslyFocusedElement.focus === "function") {
+              previouslyFocusedElement.focus();
+            }
+          }, 220);
+        };
+
+        const showSuccessState = () => {
+          formView.hidden = true;
+          successView.hidden = false;
+          modal.classList.add("is-success");
+          dialog.setAttribute("aria-labelledby", "contact-success-title");
+          dialog.setAttribute("aria-describedby", "contact-success-description");
+          requestAnimationFrame(() => {
+            focusInitialElement();
+          });
+        };
+
+        const sendContactMessage = async (payload) => {
+          if (honeypotInput.value.trim()) {
+            return { ok: true };
+          }
+
+          if (!contactConfig.endpoint) {
+            // TODO: Replace this placeholder with the production contact endpoint.
+            await new Promise((resolve) => window.setTimeout(resolve, 900));
+            console.info("Configure contactConfig.endpoint to deliver contact form messages.", payload);
+            return { ok: true, placeholder: true };
+          }
+
+          const response = await fetch(contactConfig.endpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+
+          if (!response.ok) {
+            throw new Error(`Contact request failed with status ${response.status}`);
+          }
+
+          return response.json().catch(() => ({ ok: true }));
+        };
+
+        openButtons.forEach((button) => {
+          button.addEventListener("click", () => openModal(button));
+        });
+
+        closeButtons.forEach((button) => {
+          button.addEventListener("click", () => closeModal());
+        });
+
+        modal.addEventListener("click", (event) => {
+          if (event.target === modal || event.target.hasAttribute("data-contact-close")) {
+            closeModal();
+          }
+        });
+
+        [emailInput, messageInput].forEach((field) => {
+          field.addEventListener("blur", () => {
+            fieldState[field.name].touched = true;
+            updateFieldErrors();
+            updateSubmitState();
+          });
+
+          field.addEventListener("input", () => {
+            if (fieldState[field.name].touched) {
+              updateFieldErrors();
+            }
+            resetStatus();
+            updateSubmitState();
+          });
+        });
+
+        topicInput.addEventListener("change", resetStatus);
+
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          fieldState.email.touched = true;
+          fieldState.message.touched = true;
+          updateFieldErrors({ force: true });
+          updateSubmitState();
+
+          if (!formIsValid() || isSubmitting) return;
+
+          resetStatus();
+          setSubmittingState(true);
+
+          try {
+            await sendContactMessage({
+              email: emailInput.value.trim(),
+              topic: topicInput.value.trim(),
+              message: messageInput.value.trim(),
+            });
+
+            setSubmittingState(false);
+            showSuccessState();
+          } catch (error) {
+            setSubmittingState(false);
+            showSubmitError();
+          }
+        });
+
+        updateSubmitState();
       })();
     </script>
   </body>
