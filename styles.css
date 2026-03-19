@@ -202,11 +202,16 @@ button {
 .hero-copy h1 span,
 .feature-copy h2 span,
 .djs-intro h2 span,
-.experience-intro h2 span,
+.experience-intro h2 span {
+  color: var(--pink);
+}
+
 .lede span,
 .feature-lede span,
-.djs-copy span {
+.djs-copy span,
+.feature-item span span {
   color: var(--pink);
+  font-weight: 700;
 }
 
 .lede {
@@ -406,10 +411,6 @@ button {
   color: var(--text);
   font-size: 16px;
   line-height: 1.35;
-}
-
-.feature-item span span {
-  color: var(--pink);
 }
 
 .feature-icon {
