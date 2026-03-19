@@ -490,6 +490,7 @@ button {
   line-height: 1.08;
   font-weight: 600;
   letter-spacing: -0.03em;
+  font-stretch: expanded;
 }
 
 .dj-card-body p {
@@ -536,6 +537,7 @@ button {
   font-size: 20px;
   line-height: 1.1;
   letter-spacing: -0.02em;
+  font-stretch: expanded;
 }
 
 .story-meta p {
