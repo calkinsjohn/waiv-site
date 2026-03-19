@@ -840,6 +840,10 @@ body.modal-open {
   display: none;
 }
 
+.contact-modal-view[hidden] {
+  display: none !important;
+}
+
 .contact-modal {
   position: fixed;
   inset: 0;
