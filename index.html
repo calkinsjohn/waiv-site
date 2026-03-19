@@ -275,7 +275,14 @@
                   <h3>Luna</h3>
                   <p>Calm presence. Late-night energy.</p>
                 </div>
-                <div class="dj-card-play" aria-hidden="true">▶</div>
+                <button
+                  class="dj-card-play"
+                  type="button"
+                  data-audio-src="./assets/audio/sample-luna.mp3"
+                  data-preview-label="Luna"
+                  aria-label="Play Luna preview"
+                  aria-pressed="false"
+                ></button>
               </article>
 
               <article class="dj-card">
@@ -519,5 +526,78 @@
         </div>
       </section>
     </div>
+    <script>
+      (() => {
+        const previewButtons = Array.from(document.querySelectorAll("button.dj-card-play[data-audio-src]"));
+        if (!previewButtons.length) return;
+
+        const audio = new Audio();
+        audio.preload = "metadata";
+        let activeButton = null;
+
+        const pauseMask =
+          "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 3.25A1.25 1.25 0 0 1 5.75 2h.5A1.25 1.25 0 0 1 7.5 3.25v9.5A1.25 1.25 0 0 1 6.25 14h-.5A1.25 1.25 0 0 1 4.5 12.75v-9.5Zm4 0A1.25 1.25 0 0 1 9.75 2h.5a1.25 1.25 0 0 1 1.25 1.25v9.5A1.25 1.25 0 0 1 10.25 14h-.5A1.25 1.25 0 0 1 8.5 12.75v-9.5Z'/%3E%3C/svg%3E\")";
+        const playMask =
+          "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.75 3.56C4.75 2.73 5.65 2.21 6.37 2.65L11.92 6.09C12.6 6.5 12.6 7.5 11.92 7.91L6.37 11.35C5.65 11.79 4.75 11.27 4.75 10.44V3.56Z'/%3E%3C/svg%3E\")";
+
+        const setButtonState = (button, isPlaying) => {
+          const label = button.dataset.previewLabel || "audio";
+          button.classList.toggle("is-playing", isPlaying);
+          button.setAttribute("aria-pressed", String(isPlaying));
+          button.setAttribute("aria-label", isPlaying ? `Pause ${label} preview` : `Play ${label} preview`);
+          button.style.setProperty("--dj-play-mask", isPlaying ? pauseMask : playMask);
+        };
+
+        const stopActivePreview = () => {
+          if (!activeButton) return;
+          audio.pause();
+          audio.currentTime = 0;
+          setButtonState(activeButton, false);
+          activeButton = null;
+        };
+
+        previewButtons.forEach((button) => {
+          setButtonState(button, false);
+
+          button.addEventListener("click", async () => {
+            const src = button.dataset.audioSrc;
+            if (!src) return;
+
+            if (activeButton === button && !audio.paused) {
+              audio.pause();
+              setButtonState(button, false);
+              return;
+            }
+
+            if (activeButton && activeButton !== button) {
+              setButtonState(activeButton, false);
+            }
+
+            if (audio.src !== new URL(src, window.location.href).href) {
+              audio.src = src;
+            } else {
+              audio.currentTime = 0;
+            }
+
+            activeButton = button;
+            setButtonState(button, true);
+
+            try {
+              await audio.play();
+            } catch (error) {
+              setButtonState(button, false);
+              activeButton = null;
+            }
+          });
+        });
+
+        audio.addEventListener("ended", stopActivePreview);
+        audio.addEventListener("pause", () => {
+          if (!audio.ended && activeButton) {
+            setButtonState(activeButton, false);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
