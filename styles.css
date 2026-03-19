@@ -1440,6 +1440,25 @@ body.modal-open {
 }
 
 @media (min-width: 760px) and (max-width: 1023px) {
+  .hero-video,
+  .hero-shell-default {
+    display: none;
+  }
+
+  .hero-image-desktop {
+    display: block;
+  }
+
+  .hero-shell.hero-shell-desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 56px;
+    text-align: center;
+  }
+
   .topbar {
     padding: 20px;
   }
@@ -1451,34 +1470,38 @@ body.modal-open {
   }
 
   .hero-media::after {
-    background: linear-gradient(180deg, rgba(18, 0, 34, 0) 0%, #0e020f 78.138%);
+    background: linear-gradient(180deg, rgba(18, 0, 34, 0) 50%, #0e020f 78.138%);
   }
 
-  .hero-shell {
-    align-items: flex-start;
-    gap: 32px;
-    padding: 56px;
+  .hero-copy-desktop {
+    width: 100%;
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .hero-copy {
-    max-width: 560px;
-  }
-
-  .hero-copy h1 {
+  .hero-copy-desktop h1 {
     font-size: 48px;
     line-height: 1.12;
   }
 
-  .lede {
+  .hero-copy-desktop .lede {
     margin-top: 32px;
-    max-width: 560px;
+    max-width: 544px;
     font-size: 20px;
     line-height: 1.28;
+    text-align: center;
   }
 
-  .hero-cta {
-    width: 312px;
-    justify-content: flex-start;
+  .hero-actions-desktop {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .hero-actions-desktop .store-badge-image {
+    height: 48px;
   }
 
   .section-shell {
