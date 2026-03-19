@@ -1110,7 +1110,9 @@ button.dj-card-play.is-playing::before {
   }
 
   .hero {
-    min-height: 956px;
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
   }
 
   .hero-media::after {
@@ -1308,8 +1310,8 @@ button.dj-card-play.is-playing::before {
   .hero-shell-mobile {
     align-items: center;
     justify-content: flex-end;
-    gap: 32px;
-    padding-bottom: 24px;
+    gap: 24px;
+    padding-bottom: 20px;
     text-align: center;
   }
 
