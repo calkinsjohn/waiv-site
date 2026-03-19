@@ -799,7 +799,7 @@
 
       (() => {
         const contactConfig = {
-          endpoint: "",
+          endpoint: "https://formsubmit.co/ajax/john.calkins@icloud.com",
           directEmail: "",
         };
 
@@ -893,14 +893,14 @@
 
         const resetStatus = () => {
           submitError.hidden = true;
-          submitError.textContent = "Something went wrong. Try again or email us directly.";
+          submitError.textContent = "Something went wrong. Try again or send another message in a moment.";
         };
 
         const showSubmitError = () => {
           if (contactConfig.directEmail) {
             submitError.innerHTML = `Something went wrong. Try again or <a class="contact-inline-link" href="mailto:${contactConfig.directEmail}">email us directly</a>.`;
           } else {
-            submitError.textContent = "Something went wrong. Try again or email us directly.";
+            submitError.textContent = "Something went wrong. Try again or send another message in a moment.";
           }
           submitError.hidden = false;
         };
@@ -1026,14 +1026,27 @@
               "Content-Type": "application/json",
               Accept: "application/json",
             },
-            body: JSON.stringify(payload),
+            body: JSON.stringify({
+              email: payload.email,
+              topic: payload.topic || "Not specified",
+              message: payload.message,
+              _subject: payload.topic
+                ? `WAIV contact: ${payload.topic}`
+                : "WAIV contact message",
+              _replyto: payload.email,
+              _captcha: "false",
+              _template: "table",
+              _honey: honeypotInput.value.trim(),
+            }),
           });
 
-          if (!response.ok) {
+          const data = await response.json().catch(() => ({}));
+
+          if (!response.ok || data.success === "false") {
             throw new Error(`Contact request failed with status ${response.status}`);
           }
 
-          return response.json().catch(() => ({ ok: true }));
+          return data;
         };
 
         openButtons.forEach((button) => {

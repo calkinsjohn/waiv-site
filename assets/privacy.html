@@ -421,8 +421,17 @@
             <section class="legal-section" aria-labelledby="contact">
               <h2 id="contact">9. Contact</h2>
               <p>
-                If you have questions about this Privacy Policy, contact us at
-                <span class="legal-inline-accent" data-contact-email>[INSERT CONTACT EMAIL]</span>.
+                If you have questions about this Privacy Policy,
+                <button
+                  class="contact-inline-link site-footer-link-button legal-inline-button"
+                  type="button"
+                  data-contact-open
+                  aria-haspopup="dialog"
+                  aria-controls="contact-modal"
+                  aria-expanded="false"
+                >
+                  open the contact form
+                </button>.
               </p>
             </section>
           </article>
@@ -438,6 +447,140 @@
       </footer>
     </div>
 
+    <div class="contact-modal" data-contact-modal hidden>
+      <div class="contact-modal-backdrop" data-contact-close></div>
+      <div
+        class="contact-modal-dialog"
+        id="contact-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contact-modal-title"
+        aria-describedby="contact-modal-description"
+      >
+        <div class="contact-modal-card" tabindex="-1" data-contact-panel>
+          <section class="contact-modal-view" data-contact-form-view>
+            <div class="contact-modal-header">
+              <div class="contact-modal-header-copy">
+                <div class="pill contact-modal-pill">
+                  <span class="pill-icon"></span>
+                  <span>Get in touch</span>
+                </div>
+                <h2 id="contact-modal-title">Message the station</h2>
+                <p id="contact-modal-description">
+                  Questions, feedback, or something not working? We read everything.
+                  No bots, no spam.
+                </p>
+              </div>
+              <button
+                class="contact-modal-close"
+                type="button"
+                data-contact-close
+                aria-label="Close contact form"
+              ></button>
+            </div>
+
+            <form class="contact-form" data-contact-form novalidate>
+              <div class="contact-field">
+                <label class="contact-label" for="contact-email">Email</label>
+                <input
+                  class="contact-control"
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  inputmode="email"
+                  autocomplete="email"
+                  placeholder="you@email.com"
+                  required
+                />
+                <p class="contact-field-error" data-error-for="email" aria-live="polite"></p>
+              </div>
+
+              <div class="contact-field">
+                <label class="contact-label" for="contact-topic">What&rsquo;s this about?</label>
+                <div class="contact-select-wrap">
+                  <select class="contact-control contact-select" id="contact-topic" name="topic">
+                    <option value="">Select a topic</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Bug / something's broken">Bug / something&rsquo;s broken</option>
+                    <option value="Subscription question">Subscription question</option>
+                    <option value="Just saying hi">Just saying hi</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="contact-field contact-field-message">
+                <label class="contact-label" for="contact-message">Message</label>
+                <textarea
+                  class="contact-control contact-textarea"
+                  id="contact-message"
+                  name="message"
+                  rows="5"
+                  placeholder="What&rsquo;s on your mind?"
+                  required
+                ></textarea>
+                <p class="contact-field-error" data-error-for="message" aria-live="polite"></p>
+              </div>
+
+              <div class="contact-field contact-field-honeypot" aria-hidden="true">
+                <label class="contact-label" for="contact-company">Leave this blank</label>
+                <input
+                  class="contact-control"
+                  id="contact-company"
+                  name="company"
+                  type="text"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="contact-form-footer">
+                <p class="contact-helper">
+                  We only use your email to respond. Nothing else.
+                </p>
+                <p class="contact-submit-error" data-contact-submit-error aria-live="polite" hidden>
+                  Something went wrong. Try again or send another message in a moment.
+                </p>
+                <button
+                  class="button button-primary contact-submit"
+                  type="submit"
+                  data-contact-submit
+                  disabled
+                >
+                  <span data-contact-submit-label>Send message</span>
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <section class="contact-modal-view contact-success-view" data-contact-success-view hidden>
+            <div class="contact-modal-header contact-modal-header-success">
+              <div class="contact-modal-header-copy">
+                <div class="pill contact-modal-pill">
+                  <span class="pill-icon"></span>
+                  <span>Message sent</span>
+                </div>
+                <h2 id="contact-success-title">Signal received</h2>
+                <p id="contact-success-description">We&rsquo;ll be in touch.</p>
+                <p class="contact-success-supporting">Usually within 24&ndash;48 hours.</p>
+              </div>
+              <button
+                class="contact-modal-close"
+                type="button"
+                data-contact-close
+                aria-label="Close contact form"
+              ></button>
+            </div>
+
+            <div class="contact-success-actions">
+              <button class="button button-primary contact-submit" type="button" data-contact-close>
+                Close
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
     <script>
       (() => {
         const policyMeta = {
@@ -445,21 +588,22 @@
             datetime: "2026-03-18",
             label: "March 18, 2026",
           },
-          contactEmail: "[INSERT CONTACT EMAIL]",
         };
 
         const effectiveDate = document.querySelector("[data-effective-date]");
-        const contactEmail = document.querySelector("[data-contact-email]");
 
         if (effectiveDate) {
           effectiveDate.dateTime = policyMeta.effectiveDate.datetime;
           effectiveDate.textContent = policyMeta.effectiveDate.label;
         }
-
-        if (contactEmail) {
-          contactEmail.textContent = policyMeta.contactEmail;
-        }
       })();
     </script>
+    <script>
+      window.WAIV_CONTACT_CONFIG = {
+        endpoint: "https://formsubmit.co/ajax/john.calkins@icloud.com",
+        directEmail: "",
+      };
+    </script>
+    <script src="/assets/contact-modal.js"></script>
   </body>
 </html>
