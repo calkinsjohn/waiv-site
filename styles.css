@@ -548,7 +548,7 @@ button {
 }
 
 @media (hover: hover) {
-  .dj-card:hover .dj-card-play {
+  .dj-card-play:hover {
     box-shadow:
       0 0 0 1px rgba(212, 152, 246, 0.24),
       0 0 18px rgba(186, 126, 244, 0.32),
@@ -557,7 +557,7 @@ button {
     filter: saturate(1.08);
   }
 
-  .dj-card:hover .dj-card-play::before {
+  .dj-card-play:hover::before {
     transform: scale(1.08);
   }
 }
