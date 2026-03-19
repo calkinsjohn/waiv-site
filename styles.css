@@ -507,8 +507,8 @@ button {
   overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: 12px;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: calc((100vw - 100%) / 2);
+  padding-right: calc((100vw - 100%) / 2);
   scrollbar-width: none;
 }
 
@@ -963,10 +963,6 @@ button {
     margin-top: 96px;
   }
 
-  .dj-rail {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
 }
 
 @media (min-width: 760px) and (max-width: 1023px) {
@@ -1076,9 +1072,7 @@ button {
     margin-top: 64px;
     grid-auto-columns: 280px;
     gap: 32px;
-    padding-left: 24px;
     padding-bottom: 12px;
-    padding-right: 24px;
   }
 
   .dj-card {
@@ -1284,8 +1278,6 @@ button {
     overflow-x: auto;
     overflow-y: hidden;
     padding-bottom: 8px;
-    padding-left: 24px;
-    padding-right: 24px;
     overscroll-behavior-x: contain;
     -webkit-overflow-scrolling: touch;
   }
