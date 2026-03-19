@@ -1369,13 +1369,13 @@ button {
   }
 
   .dj-card-body h3 {
-    font-size: 16px;
+    font-size: 18px;
     font-family: var(--font-expanded);
     line-height: 1.2;
   }
 
   .dj-card-body p {
-    margin-top: 16px;
+    margin-top: 12px;
     font-size: 14px;
     line-height: 1.35;
   }
