@@ -648,13 +648,7 @@ button {
 
 .experience-card {
   position: relative;
-  overflow: hidden;
-  border: 2px solid var(--purple);
-  border-radius: 32px;
-  background: #12021a;
-  box-shadow:
-    0 0 24px rgba(216, 84, 242, 0.12),
-    inset 0 0 40px rgba(0, 0, 0, 0.9);
+  overflow: visible;
 }
 
 .experience-card-single {
@@ -878,10 +872,6 @@ button {
     flex: 0 0 690px;
     width: 690px;
     max-width: 100%;
-  }
-
-  .experience-card-single {
-    border-radius: 32px;
   }
 
   .story-section {
@@ -1429,10 +1419,6 @@ button {
   .experience-media {
     width: 100%;
     min-height: 0;
-  }
-
-  .experience-card {
-    border-radius: 16px;
   }
 
   .experience-card-single {
