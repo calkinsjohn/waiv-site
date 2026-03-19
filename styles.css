@@ -764,6 +764,15 @@ button.dj-card-play.is-playing::before {
   height: auto;
 }
 
+.experience-caption {
+  margin: 16px 0 0;
+  color: var(--text-soft);
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: var(--copy-letter-spacing);
+  text-align: center;
+}
+
 .site-footer-brand p,
 .site-footer-links {
   text-align: center;
@@ -1545,6 +1554,11 @@ button.dj-card-play.is-playing::before {
 
   .experience-card-single {
     width: 100%;
+  }
+
+  .experience-caption {
+    margin-top: 12px;
+    font-size: 14px;
   }
 
   .site-footer {
