@@ -526,6 +526,21 @@ button {
   background: var(--surface-soft);
 }
 
+.dj-card-play {
+  font-size: 0;
+  line-height: 0;
+}
+
+.dj-card-play::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.75 3.56C4.75 2.73 5.65 2.21 6.37 2.65L11.92 6.09C12.6 6.5 12.6 7.5 11.92 7.91L6.37 11.35C5.65 11.79 4.75 11.27 4.75 10.44V3.56Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.75 3.56C4.75 2.73 5.65 2.21 6.37 2.65L11.92 6.09C12.6 6.5 12.6 7.5 11.92 7.91L6.37 11.35C5.65 11.79 4.75 11.27 4.75 10.44V3.56Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
 .dj-card-image {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -852,8 +867,13 @@ button {
     transform: translateY(-50%);
     background: linear-gradient(180deg, var(--purple) 0%, var(--pink) 100%);
     color: var(--surface);
-    font-size: 18px;
-    line-height: 1;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .dj-card-play::before {
+    width: 21px;
+    height: 21px;
   }
 
   .experience-section {
@@ -1302,8 +1322,13 @@ button {
     transform: translateY(-50%);
     background: linear-gradient(180deg, var(--purple) 0%, var(--pink) 100%);
     color: var(--surface);
-    font-size: 16px;
-    line-height: 1;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .dj-card-play::before {
+    width: 17px;
+    height: 17px;
   }
 
   .dj-card-body {
