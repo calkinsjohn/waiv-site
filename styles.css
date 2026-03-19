@@ -565,6 +565,7 @@ button {
 
 .dj-card-play {
   --dj-play-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.75 3.56C4.75 2.73 5.65 2.21 6.37 2.65L11.92 6.09C12.6 6.5 12.6 7.5 11.92 7.91L6.37 11.35C5.65 11.79 4.75 11.27 4.75 10.44V3.56Z'/%3E%3C/svg%3E");
+  --dj-play-offset-y: 0px;
   font-size: 0;
   line-height: 0;
   box-shadow: 0 0 14px rgba(244, 68, 172, 0.18);
@@ -589,6 +590,7 @@ button.dj-card-play {
   background-color: currentColor;
   -webkit-mask: var(--dj-play-mask) center / contain no-repeat;
   mask: var(--dj-play-mask) center / contain no-repeat;
+  transform: translateY(var(--dj-play-offset-y));
   transition: transform 180ms ease;
 }
 
@@ -603,7 +605,7 @@ button.dj-card-play {
   }
 
   button.dj-card-play:hover::before {
-    transform: scale(1.08);
+    transform: translateY(var(--dj-play-offset-y)) scale(1.08);
   }
 }
 
@@ -624,7 +626,7 @@ button.dj-card-play:focus-visible {
 
 button.dj-card-play:focus-visible::before,
 button.dj-card-play.is-playing::before {
-  transform: scale(1.08);
+  transform: translateY(var(--dj-play-offset-y)) scale(1.08);
 }
 
 .dj-card-image {
@@ -967,6 +969,7 @@ button.dj-card-play.is-playing::before {
   }
 
   .dj-card-play {
+    --dj-play-offset-y: 1px;
     position: absolute;
     top: 200px;
     right: 18px;
