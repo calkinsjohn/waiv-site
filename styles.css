@@ -1311,7 +1311,7 @@ button.dj-card-play.is-playing::before {
     align-items: center;
     justify-content: flex-end;
     gap: 24px;
-    padding-bottom: 20px;
+    padding-bottom: 64px;
     text-align: center;
   }
 
