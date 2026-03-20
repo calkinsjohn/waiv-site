@@ -64,17 +64,19 @@
     "SF Pro Custom",
     -apple-system,
     BlinkMacSystemFont,
+    "Inter",
+    system-ui,
     "Segoe UI",
     sans-serif;
   --font-expanded:
     "SF Pro Expanded",
     "SF Pro Display",
-    "SF Pro Custom",
     -apple-system,
     BlinkMacSystemFont,
-    "Segoe UI",
+    "Inter",
+    system-ui,
     sans-serif;
-  --font-button: "Archivo", var(--font-body);
+  --font-button: "Archivo", "Inter", var(--font-body);
   --font-rounded:
     "SF Pro Rounded Web",
     "SF Pro Rounded",
@@ -82,6 +84,8 @@
     "SF Pro Custom",
     -apple-system,
     BlinkMacSystemFont,
+    "Inter",
+    system-ui,
     "Segoe UI",
     sans-serif;
   --copy-letter-spacing: 0.02em;
