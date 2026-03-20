@@ -9,7 +9,7 @@
   --legal-pink: var(--pink, #f444ac);
   --legal-purple: var(--purple, #ba7ef4);
   --legal-hero-shadow: var(--hero-shadow, 0 0 12px rgba(0, 0, 0, 0.8));
-  --legal-copy-spacing: var(--copy-letter-spacing, 0.02em);
+  --legal-copy-spacing: var(--copy-letter-spacing, 0.01em);
 }
 
 html,
@@ -109,13 +109,13 @@ body {
 .legal-section h2 {
   margin: 0;
   font-family: var(--font-expanded);
-  font-stretch: expanded;
 }
 
 .legal-header h1 {
   font-size: clamp(40px, 6vw, 56px);
-  line-height: 1.02;
-  letter-spacing: -0.045em;
+  line-height: var(--type-heading-lg-line-height, 1.12);
+  font-weight: var(--type-heading-lg-weight, 700);
+  letter-spacing: var(--type-heading-lg-tracking, 0.024em);
   text-shadow: var(--legal-hero-shadow);
 }
 
@@ -149,8 +149,9 @@ body {
 .legal-section h2 {
   margin-bottom: 16px;
   font-size: 24px;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
+  line-height: var(--type-heading-sm-line-height, 1.12);
+  font-weight: var(--type-heading-sm-weight, 600);
+  letter-spacing: var(--type-heading-sm-tracking, 0.02em);
 }
 
 .legal-section p {
