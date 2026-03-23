@@ -207,6 +207,34 @@
         font-weight: 600;
       }
 
+      .legal-question {
+        margin-top: 24px;
+        color: var(--legal-text);
+        font-weight: 600;
+      }
+
+      .legal-question:first-of-type {
+        margin-top: 0;
+      }
+
+      .legal-inline-button {
+        appearance: none;
+        border: 0;
+        padding: 0;
+        background: transparent;
+        color: var(--legal-pink);
+        cursor: pointer;
+        font: inherit;
+        font-weight: 600;
+        letter-spacing: inherit;
+        text-decoration: none;
+      }
+
+      .legal-inline-button:hover,
+      .legal-inline-button:focus-visible {
+        color: var(--legal-text);
+      }
+
       .legal-cta-row {
         margin-top: 24px;
         display: flex;
@@ -328,18 +356,18 @@
 
             <section class="legal-section" aria-labelledby="quick-help">
               <h2 id="quick-help">Quick help</h2>
-              <p class="legal-inline-accent">1. How does WAIV work?</p>
+              <p class="legal-question">1. How does WAIV work?</p>
               <p>
                 WAIV turns your music library into a live radio experience.
                 AI DJs build real, flowing sessions from your saved songs so everything
                 feels connected, not random.
               </p>
-              <p class="legal-inline-accent">2. Do I need Apple Music?</p>
+              <p class="legal-question">2. Do I need Apple Music?</p>
               <p>
                 Yes. WAIV uses your Apple Music library to create your station.
                 You&rsquo;ll need an active Apple Music subscription.
               </p>
-              <p class="legal-inline-accent">3. Why isn&rsquo;t my music showing up?</p>
+              <p class="legal-question">3. Why isn&rsquo;t my music showing up?</p>
               <p>Make sure:</p>
               <ul>
                 <li>You&rsquo;re signed into Apple Music</li>
@@ -347,7 +375,7 @@
                 <li>WAIV has permission to access your music</li>
               </ul>
               <p>If it&rsquo;s still not working, try restarting the app.</p>
-              <p class="legal-inline-accent">4. Why isn&rsquo;t playback working?</p>
+              <p class="legal-question">4. Why isn&rsquo;t playback working?</p>
               <p>Check:</p>
               <ul>
                 <li>Your Apple Music subscription is active</li>
@@ -358,12 +386,12 @@
                 If everything looks right and it still won&rsquo;t play, send us a
                 message.
               </p>
-              <p class="legal-inline-accent">5. Can I choose different DJs?</p>
+              <p class="legal-question">5. Can I choose different DJs?</p>
               <p>
                 Yes. Each DJ has a different vibe.
                 You can switch anytime to change the feel of your station.
               </p>
-              <p class="legal-inline-accent">6. Can I control what plays next?</p>
+              <p class="legal-question">6. Can I control what plays next?</p>
               <p>
                 You can skip tracks or switch DJs at any time, or just let WAIV keep
                 the flow going.
@@ -373,20 +401,18 @@
             <section class="legal-section" aria-labelledby="still-need-help">
               <h2 id="still-need-help">Still need help?</h2>
               <p>
-                Send us a message and we&rsquo;ll get back to you as soon as we can.
-              </p>
-              <div class="legal-cta-row">
                 <button
-                  class="button button-primary legal-cta"
+                  class="legal-inline-button"
                   type="button"
                   data-contact-open
                   aria-haspopup="dialog"
                   aria-controls="contact-modal"
                   aria-expanded="false"
                 >
-                  Send message
+                  Send us a message
                 </button>
-              </div>
+                and we&rsquo;ll get back to you as soon as we can.
+              </p>
               <p class="legal-note">
                 WAIV is built to feel like a real station.
                 If something feels off, we want to know.
