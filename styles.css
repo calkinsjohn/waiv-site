@@ -256,6 +256,11 @@ button {
   font-weight: 700;
 }
 
+.lede .hero-lede-line {
+  color: inherit;
+  font-weight: inherit;
+}
+
 .lede {
   margin: 32px 0 0;
   max-width: 800px;
@@ -1215,6 +1220,10 @@ body.modal-open {
     text-align: center;
   }
 
+  .hero-copy-desktop .hero-lede-line {
+    white-space: nowrap;
+  }
+
   .hero-actions-desktop {
     display: flex;
     align-items: center;
@@ -1500,6 +1509,10 @@ body.modal-open {
     font-size: 20px;
     line-height: 1.28;
     text-align: center;
+  }
+
+  .hero-copy-desktop .hero-lede-line {
+    white-space: nowrap;
   }
 
   .hero-actions-desktop {
