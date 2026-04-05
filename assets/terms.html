@@ -14,10 +14,10 @@
     />
     <meta name="color-scheme" content="dark" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <title>Support | WAIV</title>
+    <title>Terms of Use | WAIV</title>
     <meta
       name="description"
-      content="Get help with WAIV, including playback, subscriptions, Apple Music connection issues, and bug reports."
+      content="Read the WAIV Terms of Use and End User License Agreement, including subscription terms for the iOS app."
     />
     <meta name="robots" content="index,follow" />
     <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" />
@@ -110,8 +110,7 @@
 
       .legal-home-link:focus-visible,
       .legal-back-link:focus-visible,
-      .legal-footer a:focus-visible,
-      .legal-cta:focus-visible {
+      .legal-footer a:focus-visible {
         outline: 2px solid rgba(244, 68, 172, 0.75);
         outline-offset: 4px;
       }
@@ -124,10 +123,6 @@
       .legal-shell {
         width: min(820px, 100%);
         margin: 0 auto;
-      }
-
-      .legal-pill {
-        margin-bottom: 24px;
       }
 
       .legal-card {
@@ -154,6 +149,14 @@
         line-height: 1.02;
         letter-spacing: -0.045em;
         text-shadow: var(--legal-hero-shadow);
+      }
+
+      .legal-effective-date {
+        margin: 16px 0 0;
+        color: var(--legal-purple);
+        font-size: 15px;
+        line-height: 1.4;
+        letter-spacing: var(--legal-copy-spacing);
       }
 
       .legal-intro,
@@ -207,14 +210,10 @@
         font-weight: 600;
       }
 
-      .legal-section .legal-question {
-        margin-top: 24px;
-        color: var(--legal-text);
-        font-weight: 600;
-      }
-
-      .legal-section .legal-question:first-of-type {
-        margin-top: 0;
+      .legal-inline-link {
+        color: var(--legal-pink);
+        text-decoration-color: rgba(244, 68, 172, 0.45);
+        text-underline-offset: 0.16em;
       }
 
       .legal-inline-button {
@@ -225,7 +224,6 @@
         color: var(--legal-pink);
         cursor: pointer;
         font: inherit;
-        font-weight: 600;
         letter-spacing: inherit;
         text-decoration: none;
       }
@@ -233,25 +231,6 @@
       .legal-inline-button:hover,
       .legal-inline-button:focus-visible {
         color: var(--legal-text);
-      }
-
-      .legal-cta-row {
-        margin-top: 24px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-
-      .legal-cta {
-        cursor: pointer;
-      }
-
-      .legal-note {
-        margin-top: 18px;
-        color: var(--legal-text-muted);
-        font-size: 15px;
-        line-height: 1.5;
-        letter-spacing: var(--legal-copy-spacing);
       }
 
       .legal-footer {
@@ -342,75 +321,197 @@
         <div class="legal-shell">
           <article class="legal-card">
             <header class="legal-header">
-              <h1>Support</h1>
+              <h1>Terms of Use / EULA</h1>
+              <p class="legal-effective-date">
+                Effective date:
+                <time data-effective-date datetime="">Loading...</time>
+              </p>
               <p class="legal-intro">
-                Need help with WAIV? We can help with playback issues,
-                Apple Music connection problems, subscriptions, and bug reports.
+                These Terms of Use govern your access to and use of WAIV on iPhone,
+                iPad, and related services. By downloading, purchasing, or using WAIV,
+                you agree to these terms.
               </p>
             </header>
 
-            <section class="legal-section" aria-labelledby="quick-help">
-              <h2 id="quick-help">Quick help</h2>
-              <p class="legal-question">1. How does WAIV work?</p>
+            <section class="legal-section" aria-labelledby="acceptance">
+              <h2 id="acceptance">1. Acceptance of these terms</h2>
               <p>
-                WAIV turns your music library into a live radio experience.
-                AI DJs build real, flowing sessions from your saved songs so everything
-                feels connected, not random.
+                WAIV is licensed, not sold, to you. Your use of the app is subject to
+                these Terms of Use, the Apple Media Services Terms, and any applicable
+                App Store rules.
               </p>
-              <p class="legal-question">2. Do I need Apple Music?</p>
               <p>
-                Yes. WAIV uses your Apple Music library to create your station.
-                You&rsquo;ll need an active Apple Music subscription.
-              </p>
-              <p class="legal-question">3. Why isn&rsquo;t my music showing up?</p>
-              <p>Make sure:</p>
-              <ul>
-                <li>You&rsquo;re signed into Apple Music</li>
-                <li>Your library is synced</li>
-                <li>WAIV has permission to access your music</li>
-              </ul>
-              <p>If it&rsquo;s still not working, try restarting the app.</p>
-              <p class="legal-question">4. Why isn&rsquo;t playback working?</p>
-              <p>Check:</p>
-              <ul>
-                <li>Your Apple Music subscription is active</li>
-                <li>You have an internet connection</li>
-                <li>Playback works in the Apple Music app</li>
-              </ul>
-              <p>
-                If everything looks right and it still won&rsquo;t play, send us a
-                message.
-              </p>
-              <p class="legal-question">5. Can I choose different DJs?</p>
-              <p>
-                Yes. Each DJ has a different vibe.
-                You can switch anytime to change the feel of your station.
-              </p>
-              <p class="legal-question">6. Can I control what plays next?</p>
-              <p>
-                You can skip tracks or switch DJs at any time, or just let WAIV keep
-                the flow going.
+                If you do not agree to these terms, do not use WAIV.
               </p>
             </section>
 
-            <section class="legal-section" aria-labelledby="still-need-help">
-              <h2 id="still-need-help">Still need help?</h2>
+            <section class="legal-section" aria-labelledby="license">
+              <h2 id="license">2. Limited license</h2>
               <p>
+                Subject to these terms, WAIV grants you a limited, non-exclusive,
+                non-transferable, revocable license to use the app on Apple-branded
+                devices that you own or control, as permitted by Apple&rsquo;s usage rules.
+              </p>
+              <p>
+                You may not copy, modify, reverse engineer, distribute, resell, or
+                exploit any part of WAIV except as allowed by applicable law.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="service-description">
+              <h2 id="service-description">3. What WAIV provides</h2>
+              <p>
+                WAIV turns your Apple Music library into a radio-style listening
+                experience using AI DJs. Features may include continuous listening,
+                DJ switching, curated station flows, and other app functionality made
+                available in the app.
+              </p>
+              <p>
+                WAIV may change, improve, suspend, or remove features at any time.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="apple-music">
+              <h2 id="apple-music">4. Apple Music requirement</h2>
+              <p>
+                WAIV requires a supported Apple device and access to Apple Music in
+                order to function as intended. You are responsible for maintaining any
+                Apple Music subscription, internet access, and device compatibility
+                required to use the app.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="subscriptions">
+              <h2 id="subscriptions">5. Subscriptions and billing</h2>
+              <p>
+                WAIV currently offers auto-renewing subscription options through the
+                App Store, including a monthly plan and an annual plan. Based on the
+                in-app purchase screen, the current U.S. pricing shown in the app is
+                <span class="legal-inline-accent"> $6.99 per month </span>
+                and
+                <span class="legal-inline-accent"> $49 per year</span>.
+              </p>
+              <p>
+                Prices may vary by region, taxes, promotions, or App Store pricing
+                updates. The price shown to you in the app at the time of purchase is
+                the controlling price.
+              </p>
+              <ul>
+                <li>Payment is charged to your Apple ID account at confirmation of purchase.</li>
+                <li>Your subscription renews automatically unless auto-renew is turned off at least 24 hours before the end of the current billing period.</li>
+                <li>Your account will be charged for renewal within 24 hours before the end of the current period.</li>
+                <li>You can manage or cancel your subscription at any time in your Apple ID account settings after purchase.</li>
+                <li>Any unused portion of a free trial, if one is offered, will be forfeited when you purchase a subscription where applicable.</li>
+              </ul>
+              <p>
+                Refunds, billing issues, and payment processing are handled by Apple,
+                not by WAIV.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="acceptable-use">
+              <h2 id="acceptable-use">6. Acceptable use</h2>
+              <p>You agree not to misuse WAIV or attempt to interfere with the service.</p>
+              <ul>
+                <li>use the app in a way that violates law or infringes another party&rsquo;s rights</li>
+                <li>attempt to bypass subscription controls, access restrictions, or technical safeguards</li>
+                <li>copy, scrape, or extract app logic, content, or generated outputs for unauthorized commercial use</li>
+                <li>disrupt or degrade the service for other users</li>
+              </ul>
+            </section>
+
+            <section class="legal-section" aria-labelledby="availability">
+              <h2 id="availability">7. Availability and updates</h2>
+              <p>
+                WAIV is provided on an
+                <span class="legal-inline-accent"> &ldquo;as available&rdquo; </span>
+                basis. We do not guarantee uninterrupted access, error-free operation,
+                or that all features will remain available at all times.
+              </p>
+              <p>
+                We may release updates, patches, or new versions of WAIV, and some
+                features may require you to use the latest version of the app.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="intellectual-property">
+              <h2 id="intellectual-property">8. Intellectual property</h2>
+              <p>
+                WAIV, including its software, branding, design, and app experience,
+                is owned by WAIV and protected by applicable intellectual property laws.
+                Apple Music content remains subject to Apple&rsquo;s and applicable rights
+                holders&rsquo; terms.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="termination">
+              <h2 id="termination">9. Suspension and termination</h2>
+              <p>
+                We may suspend or terminate your access to WAIV if you violate these
+                terms, misuse the service, or if continued operation is no longer
+                commercially or technically feasible.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="disclaimers">
+              <h2 id="disclaimers">10. Disclaimers</h2>
+              <p>
+                To the maximum extent permitted by law, WAIV is provided without
+                warranties of any kind, whether express, implied, or statutory,
+                including warranties of merchantability, fitness for a particular
+                purpose, and non-infringement.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="liability">
+              <h2 id="liability">11. Limitation of liability</h2>
+              <p>
+                To the maximum extent permitted by law, WAIV will not be liable for
+                indirect, incidental, special, consequential, or punitive damages, or
+                for loss of data, revenue, profits, or business arising out of or
+                related to your use of the app.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="apple-eula">
+              <h2 id="apple-eula">12. Apple Standard EULA</h2>
+              <p>
+                If required by the App Store, these terms are intended to supplement,
+                and not replace, Apple&rsquo;s standard Licensed Application End User
+                License Agreement. You can review Apple&rsquo;s standard EULA here:
+                <a
+                  class="legal-inline-link"
+                  href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Apple Standard EULA
+                </a>.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="changes">
+              <h2 id="changes">13. Changes to these terms</h2>
+              <p>
+                We may update these Terms of Use from time to time. If we do, we will
+                update this page and revise the effective date above.
+              </p>
+            </section>
+
+            <section class="legal-section" aria-labelledby="contact">
+              <h2 id="contact">14. Contact</h2>
+              <p>
+                If you have questions about these Terms of Use,
                 <button
-                  class="legal-inline-button"
+                  class="contact-inline-link site-footer-link-button legal-inline-button"
                   type="button"
                   data-contact-open
                   aria-haspopup="dialog"
                   aria-controls="contact-modal"
                   aria-expanded="false"
                 >
-                  Send us a message
-                </button>
-                and we&rsquo;ll get back to you as soon as we can.
-              </p>
-              <p class="legal-note">
-                WAIV is built to feel like a real station.
-                If something feels off, we want to know.
+                  open the contact form
+                </button>.
               </p>
             </section>
           </article>
@@ -422,8 +523,8 @@
           <span>&copy;2026 WAIV</span>
           <a href="/">Home</a>
           <a href="/assets/privacy.html">Privacy Policy</a>
-          <a href="/assets/terms.html">Terms of Use</a>
-          <a href="/assets/support.html" aria-current="page">Support</a>
+          <a href="/assets/terms.html" aria-current="page">Terms of Use</a>
+          <a href="/assets/support.html">Support</a>
         </div>
       </footer>
     </div>
@@ -481,12 +582,10 @@
                 <div class="contact-select-wrap">
                   <select class="contact-control contact-select" id="contact-topic" name="topic">
                     <option value="">Select a topic</option>
-                    <option value="Bug or issue">Bug or issue</option>
-                    <option value="Playback problem">Playback problem</option>
-                    <option value="Apple Music connection">Apple Music connection</option>
                     <option value="Feedback">Feedback</option>
-                    <option value="Feature request">Feature request</option>
-                    <option value="Other">Other</option>
+                    <option value="Bug / something's broken">Bug / something&rsquo;s broken</option>
+                    <option value="Subscription question">Subscription question</option>
+                    <option value="Just saying hi">Just saying hi</option>
                   </select>
                 </div>
               </div>
@@ -564,6 +663,23 @@
       </div>
     </div>
 
+    <script>
+      (() => {
+        const termsMeta = {
+          effectiveDate: {
+            datetime: "2026-04-04",
+            label: "April 4, 2026",
+          },
+        };
+
+        const effectiveDate = document.querySelector("[data-effective-date]");
+
+        if (effectiveDate) {
+          effectiveDate.dateTime = termsMeta.effectiveDate.datetime;
+          effectiveDate.textContent = termsMeta.effectiveDate.label;
+        }
+      })();
+    </script>
     <script>
       window.WAIV_CONTACT_CONFIG = {
         endpoint: "https://formsubmit.co/ajax/john.calkins@icloud.com",
